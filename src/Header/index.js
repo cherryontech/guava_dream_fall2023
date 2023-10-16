@@ -1,8 +1,12 @@
 import React from 'React';
 
-export default function Footer() {
+const Header = () => {
   return (
-    <div />
-
-  );
+    <header>
+      <h1>Equivate</h1>
+      <h3>Your Workplace Equity Navigator</h3>
+    </header>
+  )
 }
+
+export default Header;
