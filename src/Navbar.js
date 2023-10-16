@@ -1,15 +1,17 @@
 import React from 'react';
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <nav>
+        <nav>
       <ul>
-        <li />
-        <li />
-        <li />
-        <li />
-        <li />
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
       </ul>
     </nav>
-  );
+  )
 }
+
+export default Navbar;
