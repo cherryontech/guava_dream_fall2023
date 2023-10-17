@@ -8,7 +8,7 @@ const Header = () => {
       <h3>Your Workplace Equity Navigator</h3>
       <Navbar />
     </header>
-  )
-}
+  );
+};
 
 export default Header;
