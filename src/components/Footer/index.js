@@ -1,6 +1,6 @@
 import React from 'React';
 
-export default function Header() {
+export default function Footer() {
   return (
     <div />
   );
