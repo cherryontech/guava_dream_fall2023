@@ -9,6 +9,6 @@ function Header() {
       <Navbar />
     </header>
   );
-};
+}
 
 export default Header;
