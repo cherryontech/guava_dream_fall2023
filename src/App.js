@@ -1,5 +1,7 @@
+
 import logo from './logo.svg';
 import './App.css';
+import Dashboard from "./Pages/Dashboard"
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Dashboard />
     </div>
   );
 }
