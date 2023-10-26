@@ -2,6 +2,9 @@
 .dashboard-page{
     display: flex;
     justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
     border-color: #7894FF;
     border-radius: 12px;
     border-width: 12px;
@@ -15,10 +18,21 @@
     border-width: 6px;
 }
 
+.dashboard--title{
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-start;
+    margin: auto;
+    margin-left: -420px;
+    align-self: center;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 900;
+}
+
 .dashboard {
     display: flex;
     align-items: center;
-    height: 400px;
+    height: 200px;
     width: 400px;
     border-color: #7894FF;
     border-width: 6px;

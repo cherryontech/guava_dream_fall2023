@@ -7,7 +7,7 @@ const Dashboard = () => {
         //Add SideMenu component
         <section className="dashboard-page">
             <div className="dashboard--greeting">
-                <h1 className="dashboard--title">EquiVate HR Home</h1>
+                <h1 className="dashboard--title">Hello! Welcome to EquiVate HR Home</h1>
             </div>
             <div className="dashboard">Placeholder for HR dashboard
                  <div className="industry-scales">Placeholder for Industry Scales</div>
