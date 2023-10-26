@@ -1,0 +1,35 @@
+
+.dashboard-page{
+    display: flex;
+    justify-content: center;
+    border-color: #7894FF;
+    border-radius: 12px;
+    border-width: 12px;
+}
+
+.dashboard-greeting {
+    display: flex;
+    width: 300px;
+    height: 150px;
+    border-color: #7894FF;
+    border-width: 6px;
+}
+
+.dashboard {
+    display: flex;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    border-color: #7894FF;
+    border-width: 6px;
+}
+
+.industry-scales{
+    border-color: #7894FF;
+    border-width: 6px;
+}
+
+.employee-data{
+    border-color: #7894FF;
+    border-width: 6px;
+}

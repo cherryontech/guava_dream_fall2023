@@ -1,7 +1,8 @@
 
+import React from "react"
 import logo from './logo.svg';
 import './App.css';
-import Dashboard from "./Pages/Dashboard"
+import Dashboard from "./Pages/Dashboard/Dashboard.js";
 
 function App() {
   return (
