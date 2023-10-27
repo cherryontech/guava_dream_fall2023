@@ -2,16 +2,14 @@
 .dashboard-page{
     display: flex;
     justify-content: center;
-    font-family: 'DM Sans', sans-serif;
-    font-family: 'Inter', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
     border-color: #7894FF;
     border-radius: 12px;
     border-width: 12px;
 }
 
 
-.dashboard--title{
+.dashboard-title{
     display: flex;
     flex-direction: row;
     margin-right: 400px;
