@@ -1,7 +1,7 @@
 const topicsData = [
     {
-        topicName: "Employee Satisfaction",
-        topicId: index,
+        name: "Employee Satisfaction",
+        id: Date.now(),
         questions: [
             {
                 name: "Topic 1"
@@ -18,8 +18,8 @@ const topicsData = [
         ],
     },
     {
-        topicName: "Mental Health",
-        topicId: index,
+        name: "Mental Health",
+        id: Date.now(),
         questions: [
             {
                 name: "Topic 1"
@@ -36,8 +36,8 @@ const topicsData = [
         ],
     },
     {
-        topicName: "Employee Engagement",
-        topicId: index,
+        name: "Employee Engagement",
+        id: Date.now(),
         questions: [
             {
                 name: "Topic 1"
@@ -54,8 +54,8 @@ const topicsData = [
         ],
     },
     {
-        topicName: "Diversity, Equity and Inclusion",
-        topicId: index,
+        name: "Diversity, Equity and Inclusion",
+        id: Date.now(),
         questions: [
             {
                 name: "Topic 1"
@@ -72,8 +72,8 @@ const topicsData = [
         ],
     },
     {
-        topicName: "Employee Experience",
-        topicId: index,
+        name: "Employee Experience",
+        id: Date.now(),
         questions: [
             {
                 name: "Topic 1"
@@ -90,8 +90,8 @@ const topicsData = [
         ],
     },
     {
-        topicName: "Benefits",
-        topicId: index,
+        name: "Benefits",
+        id: Date.now(),
         questions: [
             {
                 name: "Topic 1"
