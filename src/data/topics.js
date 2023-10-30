@@ -108,3 +108,5 @@ const topicsData = [
         ],
     },
 ]
+
+export default topicsData;
