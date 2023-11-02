@@ -4,7 +4,7 @@ import CreateAssessment from './Components/CreateAssessment';
 
 function App() {
   return (
-    <div className="bg-blue">
+    <div className="bg-background-blue flex items-center justify-center h-screen">
       <CreateAssessment/>
     </div>
   );
