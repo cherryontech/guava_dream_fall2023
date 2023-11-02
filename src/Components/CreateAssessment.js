@@ -19,17 +19,23 @@ const CreateAssessment = () => {
         console.log('Form Handler', e.target.value)
     }
     return (
-        <section className="create-assessment-container">
-            <div>
-                <h3>Create Assessment</h3>
+        <section>
+            <div className="bg-white w-2/3 rounded-xl py-3.5 px-3 m-4">
+                <h3 className="text-blue">Create Assessment</h3>
                 <p>Select what you want to discover about you team</p>
             </div>
-            <section className="assessment-selection-container">
-                <form onSubmit={(e )=> formSubmitHandler(e)}>
+            {/* <section className="assessment-selection-container"> */}
+                <form 
+                className="grid grid-cols-3 gap-4 h-full m-4"
+                onSubmit={(e )=> formSubmitHandler(e)}>
                     {topicsMap}
-                <button type="submit">Submit</button>
+                <button 
+                type="submit"
+                className="bg-white text-blue rounded-md shadow-lg absolute top-0 right-0 h-16 w-16"
+                    >Submit
+                </button>
                 </form>
-            </section>
+            {/* </section> */}
         </section>
     )
 }
