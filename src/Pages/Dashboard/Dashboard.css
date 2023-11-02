@@ -1,0 +1,40 @@
+
+.dashboard-page {
+  display: flex;
+  justify-content: center;
+  font-family: Roboto, sans-serif;
+  border-color: #7894ff;
+  border-radius: 12px;
+  border-width: 12px;
+}
+
+.dashboard-title {
+  display: flex;
+  flex-direction: row;
+  margin-right: 400px;
+  align-self: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: x-large;
+  font-weight: 900;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 400px;
+  border-color: #7894ff;
+  border-width: 6px;
+}
+
+.industry-scales {
+  border-color: #7894ff;
+  border-width: 6px;
+}
+
+.employee-data {
+  border-color: #7894ff;
+  border-width: 6px;
+}
