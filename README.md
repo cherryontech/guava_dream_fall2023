@@ -6,6 +6,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Netlify Badge Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aa9b0844-d09c-4441-806e-54a0802dbc6b/deploy-status)](https://app.netlify.com/sites/velvety-peony-9ca833/deploys)
+
 ## Available Scripts
 
 In the project directory, you can run:
