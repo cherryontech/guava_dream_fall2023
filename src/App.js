@@ -1,4 +1,5 @@
 import './App.css';
+import './firebase.js';
 import Dashboard from "./Pages/Dashboard/Dashboard.js";
 
 function App() {
