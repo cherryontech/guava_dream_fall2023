@@ -31,26 +31,33 @@ const Navbar = () => {
     return (
         <nav>
             <div className="h-10vh flex justify-between z-50 tc lg:py-5 py-4 m-3">
-                <div className="flex items-center flex-1">
+                <div className="flex items-center flex-1 mb-2">
                 <img src={ Logo } className="w-5 m-4" />
                     <span className="text-xl font-bold">EquiVate</span>
                 </div>
                 <div className="lg:flex md:flex lg: flex-1 items-center justify-end font-normal hidden">
                     <div className="flex gap-8 mr-6 text-[18px]">
-                        <ul className="flex gap-6">
+                        <ul className="flex gap-2 mt-1">
                             <Link spy={true} smooth={true} to="App">
-                            <li className="hover:text-fuchsia-600 transtion border-b-2 border-violet-500 hover:border-fuchsia-600 cursor-pointer whitespace-nowrap">Dashboard</li>
+                            <li className="hover:text-fuchsia-600 transtion hover:border-fuchsia-600 cursor-pointer whitespace-nowrap">Dashboard</li>
                             </Link>
                             <Link spy={true} smooth={true} to="About">
-                                <li className="hover:text-fuchsia-600 transtion border-b-2 border-violet-500 hover:border-fuchsia-600 cursor-pointer whitespace-nowrap">About</li>
+                                <li className="hover:text-fuchsia-600 transtion hover:border-fuchsia-600 cursor-pointer whitespace-nowrap">About</li>
                             </Link>
                             <Link spy={true} smooth={true} to="Package">
-                                <li className="hover:text-fuchsia-600 transtion border-b-2 border-violet-500 hover:border-fuchsia-600 cursor-pointer whitespace-nowrap">Resources</li>
+                                <li className="hover:text-fuchsia-600 transtion hover:border-fuchsia-600 cursor-pointer whitespace-nowrap">Resources</li>
                             </Link>
                             <Link spy={true} smooth={true} to="Book">
-                                <li className="hover:text-fuchsia-600 transtion border-b-2 border-violet-500 hover:border-fuchsia-600 cursor-pointer whitespace-nowrap">Community</li>
+                                <li className="hover:text-fuchsia-600 transtion hover:border-fuchsia-600 cursor-pointer whitespace-nowrap">Community</li>
                             </Link>
+
                         </ul>
+                        <button className="rounded-full border-indigo-400 border-solid border-2 p-1">
+                                Login
+                            </button>
+                            <button className="text-white rounded-full bg-indigo-400 w-28">
+                                Get Started
+                            </button>
                     </div>
                 </div>
                 <div>
