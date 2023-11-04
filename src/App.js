@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './Navbar';
+import './firebase.js';
 import Dashboard from "./Pages/Dashboard/Dashboard.js";
 
 function App() {
