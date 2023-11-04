@@ -1,6 +1,8 @@
 
-.dashboard-page {
-  display: flex;
+.dashboard-container {
+  display: grid;
+  grid-template-rows:
+      minmax(100px, max-content) repeat(auto-fill, 200px) 20%;
   justify-content: center;
   font-family: Roboto, sans-serif;
   border-color: #7894ff;
@@ -8,17 +10,7 @@
   border-width: 12px;
 }
 
-.dashboard-title {
-  display: flex;
-  flex-direction: row;
-  margin-right: 400px;
-  align-self: center;
-  font-family: 'DM Sans', sans-serif;
-  font-size: x-large;
-  font-weight: 900;
-}
-
-.dashboard {
+/*.dashboard {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,13 +20,58 @@
   border-color: #7894ff;
   border-width: 6px;
 }
+*/
 
-.industry-scales {
+.welcome-box {
+  display: flex;
+  height: 300px;
+  width: 150px;
+  flex-direction: row;
+  margin-right: 400px;
+  align-self: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: x-large;
+  font-weight: 900;
+}
+
+.employee-satisfaction-box {
+  height: 150px;
+  width: 750px;
   border-color: #7894ff;
   border-width: 6px;
 }
 
-.employee-data {
+.mental-health-box{
+  height: 560px;
+  width: 420px;
+  border-color: #7894ff;
+  border-width: 6px;
+  }
+
+.employee-engagement-box {
+  height: 260px;
+  width: 305px;
+  border-color: #7894ff;
+  border-width: 6px;
+}
+
+.dei-box {
+  height: 260px;
+  width: 305px;
+  border-color: #7894ff;
+  border-width: 6px;
+}
+
+.employee-experience-box {
+  height: 260px;
+  width: 305px;
+  border-color: #7894ff;
+  border-width: 6px;
+}
+
+.benefits-box {
+  height: 260px;
+  width: 305px;
   border-color: #7894ff;
   border-width: 6px;
 }
