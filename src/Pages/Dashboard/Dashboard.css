@@ -5,12 +5,10 @@
       minmax(100px, max-content) repeat(auto-fill, 200px) 20%;
   justify-content: center;
   font-family: Roboto, sans-serif;
-  border-color: #7894ff;
-  border-radius: 12px;
-  border-width: 12px;
+  background-color: #dce2fc;
 }
 
-/*.dashboard {
+/* dashboard {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,54 +22,63 @@
 
 .welcome-box {
   display: flex;
-  height: 300px;
-  width: 150px;
+  height: 150px;
+  width: 300px;
+  padding: 12px;
   flex-direction: row;
   margin-right: 400px;
   align-self: center;
   font-family: 'DM Sans', sans-serif;
   font-size: x-large;
   font-weight: 900;
+  color:#7894ff;
+  border-radius: 25px;
+  background-color: #FFF;
 }
 
 .employee-satisfaction-box {
   height: 150px;
   width: 750px;
-  border-color: #7894ff;
-  border-width: 6px;
+  background-color: #FFF;
+  border-radius: 25px;
 }
 
 .mental-health-box{
   height: 560px;
   width: 420px;
   border-color: #7894ff;
-  border-width: 6px;
+  background-color: #FFF;
+  border-radius: 25px;
   }
 
 .employee-engagement-box {
   height: 260px;
   width: 305px;
   border-color: #7894ff;
-  border-width: 6px;
+  background-color: #FFF;
+  border-radius: 25px;
 }
 
 .dei-box {
   height: 260px;
   width: 305px;
   border-color: #7894ff;
-  border-width: 6px;
+  background-color: #FFF;
+  border-radius: 25px;
 }
 
 .employee-experience-box {
   height: 260px;
   width: 305px;
   border-color: #7894ff;
-  border-width: 6px;
+  background-color: #FFF;
+  border-radius: 25px;
 }
 
 .benefits-box {
   height: 260px;
   width: 305px;
   border-color: #7894ff;
-  border-width: 6px;
+  background-color: #FFF;
+  border-radius: 25px;
 }
