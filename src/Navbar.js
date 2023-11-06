@@ -1,4 +1,4 @@
-import { Link } from "react-scroll";
+import { NavLink } from 'react-router-dom';
 import {FaTimes} from 'react-icons/fa';
 import {BiMenu} from 'react-icons/bi';
 import { useState } from 'react';
@@ -13,18 +13,12 @@ const Navbar = () => {
     const content = <>
         <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-slate-900 transition tc mt-5 bg-white">
             <ul className="text-center text-xl p-15 flex flex-col">
-                <Link spy={true} smooth={true} to="Dashboard">
-                    <li className="m-4 p-4 border-b border-violet-500 hover:bg-slate-800 hover:rounded w-9/10">Dashboard</li>
-                </Link>
-                <Link spy={true} smooth={true} to="About">
-                    <li className="m-4 p-4 border-b border-violet-500 hover:bg-slate-800 hover:rounded w-9/10">About</li>
-                </Link>
-                <Link spy={true} smooth={true} to="Package">
-                    <li className="m-4 p-4 border-b border-violet-500 hover:bg-slate-800 hover:rounded w-9/10">Resources</li>
-                </Link>
-                <Link spy={true} smooth={true} to="Book">
-                    <li className="m-4 p-4 border-b border-violet-500 hover:bg-slate-800 hover:rounded w-9/10">Community</li>
-                </Link>
+            <NavLink to="/">
+                Dashboard
+            </NavLink>
+            <NavLink to="/about">
+                About
+            </NavLink>
             </ul>
         </div>
     </>
@@ -38,19 +32,12 @@ const Navbar = () => {
                 <div className="lg:flex md:flex lg: flex-1 items-center justify-end font-normal hidden">
                     <div className="flex gap-8 mr-6 text-[18px]">
                         <ul className="flex gap-2 mt-1">
-                            <Link spy={true} smooth={true} to="Dashboard">
-                            <li className="hover:text-fuchsia-600 transtion hover:border-fuchsia-600 cursor-pointer whitespace-nowrap">Dashboard</li>
-                            </Link>
-                            <Link spy={true} smooth={true} to="About">
-                                <li className="hover:text-fuchsia-600 transtion hover:border-fuchsia-600 cursor-pointer whitespace-nowrap">About</li>
-                            </Link>
-                            <Link spy={true} smooth={true} to="Package">
-                                <li className="hover:text-fuchsia-600 transtion hover:border-fuchsia-600 cursor-pointer whitespace-nowrap">Resources</li>
-                            </Link>
-                            <Link spy={true} smooth={true} to="Book">
-                                <li className="hover:text-fuchsia-600 transtion hover:border-fuchsia-600 cursor-pointer whitespace-nowrap">Community</li>
-                            </Link>
-
+                        <NavLink to="/">
+                            Dashboard
+                        </NavLink>
+                        <NavLink to="/about">
+                            About
+                        </NavLink>
                         </ul>
                         <button className="rounded-full border-indigo-400 border-solid border-2 p-1">
                                 Login
