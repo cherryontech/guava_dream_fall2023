@@ -1,13 +1,14 @@
 import React from "react";
 import Questions from "./Questions";
 
-const ChooseQuestions = ({topics}) => {
+const ChooseQuestions = ({topics, addQuestionsToAssessment}) => {
     const renderQuestions = topics.map((topic, index) => {
     return (
         <Questions 
             questions={topic.questions}
             key={index}
             targetedTopic={topic.name}
+            addQuestionsToAssessment={addQuestionsToAssessment}
         />
         )
     })
