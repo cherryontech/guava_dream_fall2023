@@ -19,6 +19,9 @@ const Navbar = () => {
             <NavLink to="/about">
                 About
             </NavLink>
+            <NavLink to="/community">
+                Community
+            </NavLink>
             </ul>
         </div>
     </>
@@ -37,6 +40,9 @@ const Navbar = () => {
                         </NavLink>
                         <NavLink to="/about">
                             About
+                        </NavLink>
+                        <NavLink to="/community">
+                            Community
                         </NavLink>
                         </ul>
                         <button className="rounded-full border-indigo-400 border-solid border-2 p-1">
