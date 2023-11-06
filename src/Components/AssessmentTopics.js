@@ -1,25 +1,32 @@
 import React from "react";
 
-const AssessmentTopics = ({subject, questions}) => {
+const AssessmentTopics = ({ subject, subTopics, addSelectedTopics}) => {
     const handleChange = (event) => {
-        console.log(event.target.value)
+        event.preventDefault();
+        let selectedTopic = {
+            name: event.target.value,
+            subject: subject
+        }
+        addSelectedTopics(selectedTopic)
     }
-    
-    const renderQuestions = questions.map((question, index) => {
+
+
+
+    const renderSubTopics = subTopics.map((subTopic, index) => {
         return (
         <div key={index} 
         className="bg-white text-blue border-solid border-blue border-2 rounded-lg hover:bg-blue hover:cursor-pointer hover:text-white w-2/3">
             <label htmlFor="checkbox">
-                {question.name}
+                {subTopic.name}
             </label>
             <input
                 type="checkbox"
                 id="checkbox"
                 key={index}
-                value={question.name}
+                value={subTopic.name}
                 defaultChecked={false}
                 onChange={(event) => handleChange(event)}
-                className="opacity-0"
+                // className="opacity-0"
             />
         </div>
         )
@@ -27,7 +34,7 @@ const AssessmentTopics = ({subject, questions}) => {
     return (
     <article className="p-3.5 text-center flex flex-col justify-evenly items-center bg-white rounded-xl">
         <h3 className="my-1 font-semibold">{subject}</h3>
-            {renderQuestions}
+            {renderSubTopics}
     </article>
     )
 }

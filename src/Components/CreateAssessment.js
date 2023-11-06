@@ -1,22 +1,34 @@
 import React from "react";
 import AssessmentTopics from "./AssessmentTopics";
 import topicsData from "../data/topics";
+import { useState } from "react";
+
 
 const CreateAssessment = () => {
+    const [ selectedTopics, setSelectedTopics ] = useState([]);
+
+    const addSelectedTopics = (topic) => {
+        let newTopics = [...selectedTopics, topic]       
+        setSelectedTopics(newTopics)
+    }
+
     const topicsMap = topicsData.map((topic, index) => {
-        return (
-            <AssessmentTopics 
-                subject={topic.name}
-                id={topic.id}
-                questions={topic.questions}
-                key={index}
-            />
+    return (
+        <AssessmentTopics 
+            subject={topic.name}
+            id={topic.id}
+            subTopics={topic.subTopics}
+            key={index}
+            addSelectedTopics={addSelectedTopics}
+        />
         )
     })
 
-        const formSubmitHandler = (e) => {
-        e.preventDefault()
-        console.log('Form Handler', e.target.value)
+
+    const formSubmitHandler = (e) => {
+        e.preventDefault();
+        console.log(selectedTopics)
+        
     }
     return (
         <section>
@@ -24,18 +36,17 @@ const CreateAssessment = () => {
                 <h3 className="text-blue">Create Assessment</h3>
                 <p>Select what you want to discover about you team</p>
             </div>
-            {/* <section className="assessment-selection-container"> */}
-                <form 
-                className="grid grid-cols-3 gap-4 h-full m-4"
-                onSubmit={(e )=> formSubmitHandler(e)}>
-                    {topicsMap}
+            <form 
+            className="grid grid-cols-3 gap-4 h-full m-4"
+            onSubmit={(e )=> formSubmitHandler(e)}
+            >
+                {topicsMap}
                 <button 
                 type="submit"
                 className="bg-white text-blue rounded-md shadow-lg absolute top-0 right-0 h-16 w-16"
-                    >Submit
+                >Submit
                 </button>
-                </form>
-            {/* </section> */}
+            </form>
         </section>
     )
 }
