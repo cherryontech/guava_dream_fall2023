@@ -2,7 +2,6 @@ import React from "react";
 
 const AssessmentTopics = ({ subject, subTopics, addSelectedTopics}) => {
     const handleChange = (event) => {
-        event.preventDefault();
         let selectedTopic = {
             name: event.target.value,
             subject: subject
