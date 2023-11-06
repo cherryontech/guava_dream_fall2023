@@ -1,9 +1,11 @@
 
 .dashboard-container {
-  display: grid;
-  grid-template-rows:
-      minmax(100px, max-content) repeat(auto-fill, 200px) 20%;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px;
+  border: 20px;
   font-family: Roboto, sans-serif;
   background-color: #dce2fc;
 }
@@ -19,6 +21,10 @@
   border-width: 6px;
 }
 */
+
+.row1 {
+  display:flex;
+}
 
 .welcome-box {
   display: flex;
@@ -44,6 +50,7 @@
 }
 
 .mental-health-box{
+  grid-row: 2;
   height: 560px;
   width: 420px;
   border-color: #7894ff;
@@ -52,6 +59,7 @@
   }
 
 .employee-engagement-box {
+  grid-row: 2;
   height: 260px;
   width: 305px;
   border-color: #7894ff;
@@ -68,6 +76,7 @@
 }
 
 .employee-experience-box {
+  grid-row: 3;
   height: 260px;
   width: 305px;
   border-color: #7894ff;
@@ -76,6 +85,7 @@
 }
 
 .benefits-box {
+  grid-row: 3;
   height: 260px;
   width: 305px;
   border-color: #7894ff;
