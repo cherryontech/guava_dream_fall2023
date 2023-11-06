@@ -4,7 +4,7 @@ import topicsData from "../data/topics";
 import { useState } from "react";
 
 
-const CreateAssessment = () => {
+const CreateAssessment = ({displayQuestions}) => {
     const [ selectedTopics, setSelectedTopics ] = useState([]);
 
     const addSelectedTopics = (topic) => {
@@ -24,12 +24,11 @@ const CreateAssessment = () => {
         )
     })
 
-
     const formSubmitHandler = (e) => {
         e.preventDefault();
-        console.log(selectedTopics)
-        
+        displayQuestions(selectedTopics)
     }
+
     return (
         <section>
             <div className="bg-white w-2/3 rounded-xl py-3.5 px-3 m-4">
