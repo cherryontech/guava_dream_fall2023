@@ -2,10 +2,12 @@ import React from "react";
 import AssessmentTopics from "./AssessmentTopics";
 import topicsData from "../data/topics";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const CreateAssessment = ({displayQuestions}) => {
     const [ selectedTopics, setSelectedTopics ] = useState([]);
+    const navigate = useNavigate();
 
     const addSelectedTopics = (topic) => {
         let newTopics = [...selectedTopics, topic]       
@@ -27,6 +29,7 @@ const CreateAssessment = ({displayQuestions}) => {
     const formSubmitHandler = (e) => {
         e.preventDefault();
         displayQuestions(selectedTopics)
+        navigate('/choose-questions')
     }
 
     return (
