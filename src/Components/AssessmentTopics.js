@@ -1,10 +1,11 @@
 import React from "react";
 
 const AssessmentTopics = ({ subject, subTopics, addSelectedTopics}) => {
-    const handleChange = (event) => {
+    const handleChange = (subTopic) => {
         let selectedTopic = {
-            name: event.target.value,
-            subject: subject
+            name: subTopic.name,
+            subject: subject,
+            questions: subTopic.inquiries
         }
         addSelectedTopics(selectedTopic)
     }
@@ -22,9 +23,9 @@ const AssessmentTopics = ({ subject, subTopics, addSelectedTopics}) => {
                 type="checkbox"
                 id="checkbox"
                 key={index}
-                value={subTopic.name}
+                value={subTopic}
                 defaultChecked={false}
-                onChange={(event) => handleChange(event)}
+                onChange={() => handleChange(subTopic)}
                 // className="opacity-0"
             />
         </div>
