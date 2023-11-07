@@ -1,28 +1,29 @@
 import './App.css';
+import { useState } from 'react';
 import CreateAssessment from './Components/CreateAssessment';
 import ChooseQuestions from './Components/ChooseQuestions';
-import { useState } from 'react';
 
 function App() {
-  const [ selectedFields, setSelectedFields ] = useState([])
-  const [ assessmentQuestions, setAssessmentQuestions ] = useState([]);
+  const [selectedFields, setSelectedFields] = useState([]);
+  const [assessmentQuestions, setAssessmentQuestions] = useState([]);
+
   const displayQuestions = (questions) => {
-    setSelectedFields(questions)
-  }
+    setSelectedFields(questions);
+  };
 
   const addQuestionsToAssessment = (newQuestion) => {
-    let addedQuestions = [...assessmentQuestions, newQuestion];
+    const addedQuestions = [...assessmentQuestions, newQuestion];
 
     if (!assessmentQuestions.includes(newQuestion)) {
-      setAssessmentQuestions(addedQuestions)
+      setAssessmentQuestions(addedQuestions);
     }
 
-    console.log(assessmentQuestions)
-  }
+    console.log(assessmentQuestions);
+  };
 
   return (
     <div className="bg-background-blue flex items-center justify-center h-screen">
-      <CreateAssessment displayQuestions={displayQuestions}/>
+      <CreateAssessment displayQuestions={displayQuestions} />
       <ChooseQuestions topics={selectedFields} addQuestionsToAssessment={addQuestionsToAssessment}/>
     </div>
   );
