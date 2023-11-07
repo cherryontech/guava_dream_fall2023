@@ -1,20 +1,23 @@
-import "./Dashboard.css"
+import "./Dashboard.css";
 
 const Dashboard = () => {
     return (
-        //Add Nav component
-        //Add SideMenu component
-        <section className="dashboard-page">
-            <h1 className="dashboard-title">Hello! Welcome to EquiVate HR Home</h1>
-            <div className="dashboard">Placeholder for HR dashboard
-                 <div className="industry-scales">Placeholder for Industry Scales</div>
-                 <div className="employee-data">Placeholder for Employee Data</div>
-            </div>
-
-        </section>
-    
+        <div className="page">
+            <section className="dashboard-container">
+                <div className="top-row">
+                    <h1 className="welcome-box">Hello!</h1>
+                    <div className="employee-satisfaction-box">Employee Satisfaction Data</div>
+                </div>
+                <div className="mental-health-box">Mental health Data</div>
+                <div className="square-of-boxes">
+                    <div className="employee-engagement-box">Employee Enagement Data</div>
+                    <div className="dei-box">DEI Data</div>
+                    <div className="employee-experience-box">Employee Experience Data</div>
+                    <div className="benefits-box">Benefits Data</div>
+                </div>
+            </section>
+        </div>
     )
-
 }
 
 export default Dashboard

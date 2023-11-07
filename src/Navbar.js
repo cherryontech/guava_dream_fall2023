@@ -29,7 +29,7 @@ const Navbar = () => {
         <nav>
             <div className="h-10vh flex justify-between z-50 tc lg:py-5 py-4 m-3">
                 <div className="flex items-center flex-1 mb-2">
-                <img src={ Logo } className="w-5 m-4" />
+                <img src={ Logo } className="w-5 m-4" alt="EquiVate logo, pen inside of box" />
                     <span className="text-xl font-bold">EquiVate</span>
                 </div>
                 <div className="lg:flex md:flex lg: flex-1 items-center justify-end font-normal hidden">
