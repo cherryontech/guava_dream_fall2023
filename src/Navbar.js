@@ -22,6 +22,11 @@ const Navbar = () => {
             <NavLink to="/community">
                 Community
             </NavLink>
+            <NavLink to="/Login"> Login
+                <button className="rounded-full border-indigo-400 border-solid border-2 p-1">
+                    Login
+                </button>
+            </NavLink>
             </ul>
         </div>
     </>
@@ -45,10 +50,10 @@ const Navbar = () => {
                             Community
                         </NavLink>
                         </ul>
-                        <NavLink to="/Login">
-                        <button className="rounded-full border-indigo-400 border-solid border-2 p-1">
+                        <NavLink to="/Login"> Login
+                            <button className="rounded-full border-indigo-400 border-solid border-2 p-1">
                                 Login
-                        </button>
+                            </button>
                         </NavLink>
                             <button className="text-white rounded-full bg-indigo-400 w-28">
                                 Get Started
