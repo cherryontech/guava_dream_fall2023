@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import AssessmentTopics from './AssessmentTopics';
 import topicsData from '../data/topics';
 
@@ -11,17 +11,15 @@ const CreateAssessment = ({ displayQuestions }) => {
     setSelectedTopics(newTopics);
   };
 
-  const topicsMap = topicsData.map((topic, index) => {
-    return (
-      <AssessmentTopics
-        subject={topic.name}
-        id={topic.id}
-        subTopics={topic.subTopics}
-        key={index}
-        addSelectedTopics={addSelectedTopics}
-      />
-    );
-  });
+  const topicsMap = topicsData.map((topic) => (
+    <AssessmentTopics
+      subject={topic.name}
+      id={topic.id}
+      subTopics={topic.subTopics}
+      key={topic.id}
+      addSelectedTopics={addSelectedTopics}
+    />
+  ));
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
@@ -48,6 +46,10 @@ const CreateAssessment = ({ displayQuestions }) => {
       </form>
     </section>
   );
+};
+
+CreateAssessment.propTypes = {
+  displayQuestions: PropTypes.func.isRequired,
 };
 
 export default CreateAssessment;
