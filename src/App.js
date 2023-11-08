@@ -28,7 +28,8 @@ function App() {
   return (
     <div className="bg-background-blue flex items-center justify-center h-screen">
       <CreateAssessment displayQuestions={displayQuestions} />
-      <ChooseQuestions selectedFields={selectedFields} addQuestionsToAssessment={addQuestionsToAssessment}/>
+      {/* eslint-disable-next-line max-len */ }
+      <ChooseQuestions selectedFields={selectedFields} addQuestionsToAssessment={addQuestionsToAssessment} />
       <AssessmentDraft assessmentQuestions={assessmentQuestions} deleteQuestion={deleteQuestion} />
     </div>
   );
