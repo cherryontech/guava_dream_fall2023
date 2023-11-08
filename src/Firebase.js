@@ -1,7 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth } from "firebase/auth";
+import React, {useState} from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { auth } from '../firebase';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -22,35 +25,36 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-​​const auth = getAuth(app);
-​​const db = getFirestore(app);
 
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-//Add user -- does this need it's own page?
-const auth = getAuth();
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed up 
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
-
-//Authenticate user 
-  firebase.auth().signInWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Signed in
-    var user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-  });
-
-export {app, analytics}
-export const auth = getAuth(app)
+//SIGN OUT USER
+const Home = () => {
+    const navigate = useNavigate();
+ 
+    const handleLogout = () => {               
+        signOut(auth).then(() => {
+        // Sign-out successful.
+            navigate("/");
+            console.log("Signed out successfully")
+        }).catch((error) => {
+        // An error happened.
+        });
+    }
+   
+    return(
+        <>
+            <nav>
+                <p>
+                    Welcome Home
+                </p>
+ 
+                <div>
+        			<button onClick={handleLogout}>
+                        Logout
+                    </button>
+        		</div>
+            </nav>
+        </>
+    )
+}
+ 
+export { app, analytics, auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut }
