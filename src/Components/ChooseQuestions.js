@@ -1,13 +1,13 @@
 import React from 'react';
 import Questions from './Questions';
 
-const ChooseQuestions = ({ topics, addQuestionsToAssessment }) => {
-  const renderQuestions = topics.map((topic, index) => {
+const ChooseQuestions = ({ selectedFields, addQuestionsToAssessment }) => {
+  const renderQuestions = selectedFields.map((selectedField, index) => {
     return (
       <Questions
-        questions={topic.questions}
+        questions={selectedField.questions}
         key={index}
-        targetedTopic={topic.name}
+        targetedTopic={selectedField.name}
         addQuestionsToAssessment={addQuestionsToAssessment}
       />
     );

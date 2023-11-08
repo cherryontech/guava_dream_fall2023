@@ -1,14 +1,14 @@
 import React from "react";
 
 const AssessmentTopics = ({ subject, subTopics, addSelectedTopics}) => {
-    const handleChange = (subTopic) => {
-        let selectedTopic = {
-            name: subTopic.name,
-            subject: subject,
-            questions: subTopic.inquiries
-        }
-        addSelectedTopics(selectedTopic)
-    }
+  const handleChange = (subTopic) => {
+    const selectedTopic = {
+      name: subTopic.name,
+      subject: subject,
+      questions: subTopic.inquiries,
+    };
+    addSelectedTopics(selectedTopic);
+  };
 
 
 

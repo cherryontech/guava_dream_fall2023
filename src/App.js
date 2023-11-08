@@ -20,11 +20,16 @@ function App() {
     }
   };
 
+  const deleteQuestion = (id) => {
+    const filteredQuestions = assessmentQuestions.filter((question) => question.id !== id);
+    setAssessmentQuestions(filteredQuestions);
+  };
+
   return (
     <div className="bg-background-blue flex items-center justify-center h-screen">
       <CreateAssessment displayQuestions={displayQuestions} />
-      <ChooseQuestions topics={selectedFields} addQuestionsToAssessment={addQuestionsToAssessment}/>
-      <AssessmentDraft assessmentQuestions={assessmentQuestions} />
+      <ChooseQuestions selectedFields={selectedFields} addQuestionsToAssessment={addQuestionsToAssessment}/>
+      <AssessmentDraft assessmentQuestions={assessmentQuestions} deleteQuestion={deleteQuestion} />
     </div>
   );
 }

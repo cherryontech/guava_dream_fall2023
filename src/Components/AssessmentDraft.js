@@ -1,7 +1,7 @@
 import React from 'react';
 import { Slider } from '@mui/material';
 
-const AssessmentDraft = ({ assessmentQuestions }) => {
+const AssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
   const marks = [
     {
       value: 0,
@@ -36,7 +36,7 @@ const AssessmentDraft = ({ assessmentQuestions }) => {
   const displayAssessmentQuestions = assessmentQuestions.map((question, index) => {
     return (
       <div key={index}>
-        <h3>{question}</h3>
+        <h3>{question.name}</h3>
         <Slider
           aria-label="Always visible"
           defaultValue={3}
@@ -45,6 +45,7 @@ const AssessmentDraft = ({ assessmentQuestions }) => {
           valueLabelDisplay="on"
           marks={marks}
         />
+        <button onClick={() => deleteQuestion(question.id)}>Delete Question</button>
       </div>
     );
   });
@@ -52,7 +53,6 @@ const AssessmentDraft = ({ assessmentQuestions }) => {
   return (
     <>
       <p>AssessmentDraft</p>
-      {console.log('Assessment Questions', assessmentQuestions)}
       {displayAssessmentQuestions}
     </>
   );
