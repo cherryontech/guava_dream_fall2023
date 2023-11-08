@@ -3,8 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { useNavigate } from 'react-router-dom';
 import {  createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import { getAuth } from '../firebase';
-const auth = getAuth(app); // Initializing the authentication service
+import { getAuth } from 'firebase/auth';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -25,6 +24,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+const auth = getAuth(app); // Initializing the authentication service
 
 //SIGN OUT USER
 const Home = () => {
@@ -54,4 +54,4 @@ const Home = () => {
     )
 }
  
-export { app, analytics, auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut , Home }
+export { app, analytics, auth, getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut , Home }

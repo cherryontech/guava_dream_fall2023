@@ -1,0 +1,21 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.form {
+    height: 400px;
+    width: 600px;
+    font-size: xx-large;
+    border-radius: 25px;
+    border: 25px;
+    border-width: thick;
+    border-color: #7894ff;
+    background-color:#7894ff;
+}

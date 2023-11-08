@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { auth, signInWithEmailAndPassword } from "./firebase/auth"
+import { auth, signInWithEmailAndPassword } from "./Firebase"
 import { NavLink, useNavigate } from 'react-router-dom'
+import "./Login.css"
 
 
 //USER LOGIN
@@ -28,11 +29,11 @@ const Login = () => {
  
     return(
         <>
+            <div>
             <main >        
-                <section>
-                    <div>                                            
-                        <p> EquiVate </p>                       
-                                                       
+                <section >
+                    <div >                                            
+                        <p className="login-title"> EquiVate </p>                                                     
                         <form>                                              
                             <div>
                                 <label htmlFor="email-address">
@@ -81,7 +82,9 @@ const Login = () => {
                     </div>
                 </section>
             </main>
+            </div>
         </>
+    
     )
 }
 
