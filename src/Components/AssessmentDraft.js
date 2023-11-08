@@ -30,26 +30,22 @@ const AssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
     },
   ];
 
-  const valuetext = (value) => {
-    return `${value}`;
-  };
+  const valuetext = (value) => `${value}`;
 
-  const displayAssessmentQuestions = assessmentQuestions.map((question, index) => {
-    return (
-      <div key={index}>
-        <h3>{question.name}</h3>
-        <Slider
-          aria-label="Always visible"
-          defaultValue={3}
-          getAriaValueText={valuetext}
-          step={null}
-          valueLabelDisplay="on"
-          marks={marks}
-        />
-        <button onClick={() => deleteQuestion(question.id)}>Delete Question</button>
-      </div>
-    );
-  });
+  const displayAssessmentQuestions = assessmentQuestions.map((question) => (
+    <div key={Date.now()}>
+      <h3>{question.name}</h3>
+      <Slider
+        aria-label="Always visible"
+        defaultValue={3}
+        getAriaValueText={valuetext}
+        step={null}
+        valueLabelDisplay="on"
+        marks={marks}
+      />
+      <button type="button" onClick={() => deleteQuestion(question.id)}>Delete Question</button>
+    </div>
+  ));
 
   return (
     <>

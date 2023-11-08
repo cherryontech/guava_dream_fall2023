@@ -6,7 +6,7 @@ const ChooseQuestions = ({ selectedFields, addQuestionsToAssessment }) => {
   const renderQuestions = selectedFields.map((selectedField) => (
     <Questions
       questions={selectedField.questions}
-      key={selectedField.id}
+      key={Date.now()}
       targetedTopic={selectedField.name}
       addQuestionsToAssessment={addQuestionsToAssessment}
     />
