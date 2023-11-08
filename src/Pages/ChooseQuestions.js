@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 import Questions from './Questions';
 
 const ChooseQuestions = ({ selectedFields, addQuestionsToAssessment }) => {
-  const renderQuestions = selectedFields.map((selectedField) => (
+  const renderQuestions = selectedFields.map((selectedField, index) => (
     <Questions
       questions={selectedField.questions}
-      key={Date.now()}
+      key={`${selectedField.name}-${index}-${Date.now()}`}
       targetedTopic={selectedField.name}
       addQuestionsToAssessment={addQuestionsToAssessment}
-    />
+      />
   ));
 
   return (
@@ -25,7 +25,7 @@ const ChooseQuestions = ({ selectedFields, addQuestionsToAssessment }) => {
 };
 
 ChooseQuestions.propTypes = {
-  selectedFields: PropTypes.arrayOf(PropTypes.string).isRequired,
+  selectedFields: PropTypes.arrayOf(PropTypes.shape).isRequired,
   addQuestionsToAssessment: PropTypes.func.isRequired,
 };
 
