@@ -10,9 +10,9 @@ const AssessmentTopics = ({ subject, subTopics, addSelectedTopics }) => {
     addSelectedTopics(selectedTopic);
   };
 
-  const renderSubTopics = subTopics.map((subTopic) => (
+  const renderSubTopics = subTopics.map((subTopic, index) => (
     <div
-      key={Date.now()}
+      key={index}
       className="bg-white text-blue border-solid border-blue border-2 rounded-lg hover:bg-bluehover:cursor-pointer hover:text-white w-2/3"
     >
       <label htmlFor="checkbox">
@@ -20,8 +20,8 @@ const AssessmentTopics = ({ subject, subTopics, addSelectedTopics }) => {
       </label>
       <input
         type="checkbox"
-        id="checkbox"
-        value={subTopic}
+        id={subTopic.name}
+        value={subTopic.name}
         defaultChecked={false}
         onChange={() => handleChange(subTopic)}
         // className="opacity-0"
