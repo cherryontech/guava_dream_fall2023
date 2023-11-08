@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import AssessmentTopics from './AssessmentTopics';
 import topicsData from '../data/topics';
 
 const CreateAssessment = ({ displayQuestions }) => {
   const [selectedTopics, setSelectedTopics] = useState([]);
+  const navigate = useNavigate();
 
   const addSelectedTopics = (topic) => {
     const newTopics = [...selectedTopics, topic];
@@ -24,6 +26,7 @@ const CreateAssessment = ({ displayQuestions }) => {
   const formSubmitHandler = (e) => {
     e.preventDefault();
     displayQuestions(selectedTopics);
+    navigate("/choose-assessment-questions");
   };
 
   return (
@@ -40,7 +43,7 @@ const CreateAssessment = ({ displayQuestions }) => {
         <button
           type="submit"
           className="bg-white text-blue rounded-md shadow-lg absolute top-0 right-0 h-16 w-16"
-        >
+          >
           Submit
         </button>
       </form>
