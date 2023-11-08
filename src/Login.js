@@ -1,5 +1,7 @@
-import React, { useState } from "react";
-import { auth, signInWithEmailAndPassword }
+import { useState } from "react";
+import { auth, signInWithEmailAndPassword } from "./firebase/auth"
+import { NavLink, useNavigate } from 'react-router-dom'
+
 
 //USER LOGIN
 const Login = () => {
@@ -83,4 +85,4 @@ const Login = () => {
     )
 }
 
-export {Login};
+export default Login

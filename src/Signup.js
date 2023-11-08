@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from 'react';
 import { auth , createUserWithEmailAndPassword } from "./Firebase";
 import { NavLink, useNavigate } from 'react-router-dom';
 
@@ -89,4 +89,4 @@ const Signup = () => {
   )
 }
  
-export {Signup}
+export default Signup

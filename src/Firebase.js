@@ -1,10 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import React, {useState} from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import { auth } from '../firebase';
+import { useNavigate } from 'react-router-dom';
+import {  createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { getAuth } from '../firebase';
+const auth = getAuth(app); // Initializing the authentication service
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -36,25 +36,22 @@ const Home = () => {
             navigate("/");
             console.log("Signed out successfully")
         }).catch((error) => {
-        // An error happened.
+          console.error("Error occured during sign-out:", error);
         });
     }
    
     return(
         <>
-            <nav>
-                <p>
-                    Welcome Home
-                </p>
- 
-                <div>
-        			<button onClick={handleLogout}>
+          <nav>
+            <p>Welcome Home</p>
+          <div>
+        <button onClick={handleLogout}>
                         Logout
-                    </button>
-        		</div>
-            </nav>
+              </button>
+        </div>
+          </nav>
         </>
     )
 }
  
-export { app, analytics, auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut }
+export { app, analytics, auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut , Home }
