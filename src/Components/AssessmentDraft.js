@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Slider } from '@mui/material';
 
 const AssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
@@ -56,6 +57,11 @@ const AssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
       {displayAssessmentQuestions}
     </>
   );
+};
+
+AssessmentDraft.propTypes = {
+  assessmentQuestions: PropTypes.arrayOf(PropTypes.shape).isRequired,
+  deleteQuestion: PropTypes.func.isRequired,
 };
 
 export default AssessmentDraft;
