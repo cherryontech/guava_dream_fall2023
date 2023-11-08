@@ -1,17 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Questions from './Questions';
 
 const ChooseQuestions = ({ selectedFields, addQuestionsToAssessment }) => {
-  const renderQuestions = selectedFields.map((selectedField, index) => {
-    return (
-      <Questions
-        questions={selectedField.questions}
-        key={index}
-        targetedTopic={selectedField.name}
-        addQuestionsToAssessment={addQuestionsToAssessment}
-      />
-    );
-  });
+  const renderQuestions = selectedFields.map((selectedField) => (
+    <Questions
+      questions={selectedField.questions}
+      key={selectedField.id}
+      targetedTopic={selectedField.name}
+      addQuestionsToAssessment={addQuestionsToAssessment}
+    />
+  ));
 
   return (
     <section>
@@ -24,6 +23,11 @@ const ChooseQuestions = ({ selectedFields, addQuestionsToAssessment }) => {
       </div>
     </section>
   );
+};
+
+ChooseQuestions.propTypes = {
+  selectedFields: PropTypes.arrayOf(PropTypes.string).isRequired,
+  addQuestionsToAssessment: PropTypes.func.isRequired,
 };
 
 export default ChooseQuestions;
