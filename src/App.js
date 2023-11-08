@@ -9,11 +9,13 @@ import Community from "./Community";
 import ViewAssessmentDraft from './Pages/ViewAssessmentDraft.js';
 import CreateAssessment from './Pages/CreateAssessment.js';
 import ChooseQuestions from './Pages/ChooseQuestions.js';
+import Modal from './Pages/Modal/Modal.js';
 
 function App() {
 
   const [selectedFields, setSelectedFields] = useState([]);
   const [assessmentQuestions, setAssessmentQuestions] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
 
   const displayQuestions = (questions) => {
     setSelectedFields(questions);
@@ -25,7 +27,9 @@ function App() {
     if (!assessmentQuestions.includes(newQuestion)) {
       setAssessmentQuestions(addedQuestions);
     }
+    setIsOpen(true)
   };
+
 
   const deleteQuestion = (id) => {
     const filteredQuestions = assessmentQuestions.filter((question) => question.id !== id);
@@ -49,6 +53,10 @@ function App() {
           <Route path="assessment-draft" element={<ViewAssessmentDraft assessmentQuestions={assessmentQuestions} deleteQuestion={deleteQuestion} />
           }/>
     </Routes>
+    {/* <button onClick={() => setIsOpen(true)}>
+        Click me</button>
+      {isOpen && <Modal setIsOpen={setIsOpen} />} */}
+      {isOpen && <Modal setIsOpen={setIsOpen} />}
     </BrowserRouter>
   );
     
