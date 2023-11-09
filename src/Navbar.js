@@ -22,6 +22,9 @@ const Navbar = () => {
             <NavLink to="/community">
                 Community
             </NavLink>
+            <NavLink to="/Login">
+                 
+            </NavLink>
             </ul>
         </div>
     </>
@@ -34,20 +37,20 @@ const Navbar = () => {
                 </div>
                 <div className="lg:flex md:flex lg: flex-1 items-center justify-end font-normal hidden">
                     <div className="flex gap-8 mr-6 text-[18px]">
-                        <ul className="flex gap-2 mt-1">
-                        <NavLink to="/">
+                        <ul className="flex gap-8 mt-1">
+                        <NavLink to="/" className={"mt-1.5"}>
                             Dashboard
                         </NavLink>
-                        <NavLink to="/about">
+                        <NavLink to="/about" className={"mt-1.5"}>
                             About
                         </NavLink>
-                        <NavLink to="/community">
+                        <NavLink to="/community" className={"mt-1.5"}>
                             Community
                         </NavLink>
                         </ul>
-                        <button className="rounded-full border-indigo-400 border-solid border-2 p-1">
-                                Login
-                            </button>
+                        <NavLink to="/Login" className={"border-2 rounded-full border-indigo-400 p-1.5"}> Login
+                             
+                        </NavLink> 
                             <button className="text-white rounded-full bg-indigo-400 w-28">
                                 Get Started
                             </button>
