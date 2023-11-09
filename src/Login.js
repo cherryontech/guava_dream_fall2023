@@ -64,7 +64,7 @@ const Login = () => {
                             </div>
                                                
                             <div>
-                                <button className="border-2 rounded-lg bg-indigo-400 text-white font-bold p-1.5 "                                   
+                                <button className="border-2 rounded-lg bg-indigo-400 text-white font-bold p-1.5"                                   
                                     onClick={onLogin}                                        
                                 >      
                                     Login                                                                  

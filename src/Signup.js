@@ -34,16 +34,17 @@ const Signup = () => {
  
   return (
     <main >        
-        <section>
-            <div>
+        <section className="flex justify-center">
+            <div className="flex flex-col border-4 border-indigo-400 rounded-xl m-8 p-3 space-y-4"> 
                 <div>                  
-                    <h1> EquiVate </h1>                                                                            
-                    <form>                                                                                            
-                        <div>
+                    <h1 className="text-xl font-bold text-indigo-400"> Welcome to EquiVate! </h1>
+                    <p className='text-base italic'>Create your account</p>                                                                            
+                    <form className="space-y-6">                                                                                            
+                        <div className="flex flex-col">
                             <label htmlFor="email-address">
                                 Email address
                             </label>
-                            <input
+                            <input className="border-2 rounded-lg space-x-2 text-sm"
                                 type="email"
                                 label="Email address"
                                 value={email}
@@ -53,11 +54,11 @@ const Signup = () => {
                             />
                         </div>
 
-                        <div>
+                        <div className="flex flex-col">
                             <label htmlFor="password">
                                 Password
                             </label>
-                            <input
+                            <input className="border-2 rounded-lg space-x-2 text-sm"
                                 type="password"
                                 label="Create password"
                                 value={password}
@@ -67,7 +68,7 @@ const Signup = () => {
                             />
                         </div>                                             
                         
-                        <button
+                        <button className="border-2 rounded-lg bg-indigo-400 text-white font-bold p-1.5"  
                             type="submit" 
                             onClick={onSubmit}                        
                         >  
@@ -76,9 +77,9 @@ const Signup = () => {
                                                                      
                     </form>
                    
-                    <p>
+                    <p className="text-xs text-black text-center pt-10">
                         Already have an account?{' '}
-                        <NavLink to="/login" >
+                        <NavLink to="/login" className={"hover:text-indigo-400"} >
                             Sign in
                         </NavLink>
                     </p>                   
