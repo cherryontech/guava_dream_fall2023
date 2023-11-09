@@ -29,9 +29,12 @@ const Login = () => {
  
     return(
         <>
-            <div>
+            <div className="h-screen bg-gradient-to-l from-indigo-300">
             <main >        
                 <section className="flex justify-center" >
+                    <div className="flex flex-col">
+                        <h1>{`Let's start listening to your employees`}</h1>
+                    </div>
                     <div className="flex flex-col border-4 border-indigo-400 rounded-xl m-8 p-3 space-y-4" >                                            
                         <p className="text-xl font-bold text-indigo-400"> Welcome to EquiVate! </p>                                                     
                         <form className="space-y-6">                                              
