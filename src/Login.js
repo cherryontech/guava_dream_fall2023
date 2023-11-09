@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { auth, signInWithEmailAndPassword } from "./Firebase"
 import { NavLink, useNavigate } from 'react-router-dom'
-import "./Login.css"
+
 
 
 //USER LOGIN
@@ -31,15 +31,15 @@ const Login = () => {
         <>
             <div>
             <main >        
-                <section >
-                    <div >                                            
-                        <p className="login-title"> EquiVate </p>                                                     
-                        <form>                                              
-                            <div>
+                <section className="flex justify-center" >
+                    <div className="flex flex-col border-4 border-indigo-400 rounded-xl m-8 p-3 space-y-4" >                                            
+                        <p className="text-xl font-bold text-indigo-400"> Welcome to EquiVate! </p>                                                     
+                        <form className="space-y-6">                                              
+                            <div className="flex flex-col">
                                 <label htmlFor="email-address">
                                     Email address
                                 </label>
-                                <input
+                                <input className="border-2 rounded-lg space-x-2 text-sm"
                                     id="email-address"
                                     name="email"
                                     type="email"                                    
@@ -49,11 +49,11 @@ const Login = () => {
                                 />
                             </div>
 
-                            <div>
+                            <div className="flex flex-col">
                                 <label htmlFor="password">
                                     Password
                                 </label>
-                                <input
+                                <input className="border-2 rounded-lg space-x-2 text-sm"
                                     id="password"
                                     name="password"
                                     type="password"                                    
@@ -62,19 +62,20 @@ const Login = () => {
                                     onChange={(e)=>setPassword(e.target.value)}
                                 />
                             </div>
-                                                
+                                               
                             <div>
-                                <button                                    
+                                <button className="border-2 rounded-lg bg-indigo-400 text-white font-bold p-1.5 "                                   
                                     onClick={onLogin}                                        
                                 >      
                                     Login                                                                  
                                 </button>
-                            </div>                               
+                            </div> 
+                                  
                         </form>
                        
-                        <p className="text-sm text-white text-center">
+                        <p className="text-xs text-black text-center pt-6">
                             No account yet? {' '}
-                            <NavLink to="/signup">
+                            <NavLink to="/signup" className={"hover:text-indigo-400"}>
                                 Sign up
                             </NavLink>
                         </p>
