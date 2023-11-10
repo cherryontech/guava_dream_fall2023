@@ -4,7 +4,6 @@ import {BiMenu} from 'react-icons/bi';
 import { useState } from 'react';
 import "./Navbar.css";
 import Logo from "./logo.png";
-
 const Navbar = () => {
     const [click, setClick] = useState(false);
     const handleClick = () => {
@@ -21,6 +20,15 @@ const Navbar = () => {
             </NavLink>
             <NavLink to="/community">
                 Community
+            </NavLink>
+            <NavLink to="/create-assessment">
+                Create A New Assessment
+            </NavLink>
+            <NavLink to="/choose-assessment-questions">
+                Choose Questions
+            </NavLink>
+            <NavLink to="/assessment-draft">
+                View Assessment Draft
             </NavLink>
             </ul>
         </div>
@@ -44,13 +52,22 @@ const Navbar = () => {
                         <NavLink to="/community">
                             Community
                         </NavLink>
+                        <NavLink to="/create-assessment">
+                            Create A New Assessment
+                        </NavLink>
+                        <NavLink to="/choose-assessment-questions">
+                            Choose Questions
+                        </NavLink>
+                        <NavLink to="/assessment-draft">
+                            View Assessment Draft
+                        </NavLink>
                         </ul>
                         <button className="rounded-full border-indigo-400 border-solid border-2 p-1">
-                                Login
-                            </button>
-                            <button className="text-white rounded-full bg-indigo-400 w-28">
-                                Get Started
-                            </button>
+                            Login
+                        </button>
+                        <button className="text-white rounded-full bg-indigo-400 w-28">
+                            Get Started
+                        </button>
                     </div>
                 </div>
                 <div>
