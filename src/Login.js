@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { auth, signInWithEmailAndPassword } from "./Firebase"
 import { NavLink, useNavigate } from 'react-router-dom'
+import  Image from './Assets/Collaboration for Login Page.png'
 
 
 
@@ -29,14 +30,16 @@ const Login = () => {
  
     return(
         <>
-            <div className="h-screen bg-gradient-to-l from-indigo-300">
+            <div className="h-screen bg-gradient-to-l from-indigo-300 flex justify-center items-center ">
             <main >        
                 <section className="flex justify-center" >
-                    <div className="flex flex-col">
-                        <h1>{`Let's start listening to your employees`}</h1>
+                    <div className="flex flex-col w-96 ">
+                        <h1 className="text-4xl font-bold text-indigo-400 font-dm-sans">{`Let's start listening to your employees`}</h1>
+                        <p className="text-sm text-align-left text-slate-500">Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.</p>
+                        <img src= { Image } alt="Three cartoon people sitting in front of a computer with lightbulbs above their heads"></img>
                     </div>
-                    <div className="flex flex-col border-4 border-indigo-400 rounded-xl m-8 p-3 space-y-4" >                                            
-                        <p className="text-xl font-bold text-indigo-400"> Welcome to EquiVate! </p>                                                     
+                    <div className="flex flex-col border-4 bg-white rounded-xl m-8 p-3 space-y-4 w-96 h-80" >                                            
+                        <p className="text-xl font-bold text-indigo-400"> Login to your account </p>                                                     
                         <form className="space-y-6">                                              
                             <div className="flex flex-col">
                                 <label htmlFor="email-address">

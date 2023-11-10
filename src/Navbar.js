@@ -3,7 +3,7 @@ import {FaTimes} from 'react-icons/fa';
 import {BiMenu} from 'react-icons/bi';
 import { useState } from 'react';
 import "./Navbar.css";
-import Logo from "./logo.png";
+import Logo from "./Assets/logo.png";
 
 const Navbar = () => {
     const [click, setClick] = useState(false);

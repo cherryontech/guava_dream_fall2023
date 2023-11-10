@@ -3,7 +3,10 @@ export const content = [
   "./src/**/*.{js,jsx,ts,tsx}",
 ];
 export const theme = {
-  extend: {},
+  extend: { 
+    fontFamily: {
+      'dm-sans' : ['"DM-Sans', 'sans-serif']
+    }
+  },
 };
 export const plugins = [];
-
