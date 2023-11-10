@@ -10,6 +10,9 @@ import ViewAssessmentDraft from './Pages/ViewAssessmentDraft.js';
 import CreateAssessment from './Pages/CreateAssessment.js';
 import ChooseQuestions from './Pages/ChooseQuestions.js';
 import Modal from './Pages/Modal/Modal.js';
+import Login from "./Login.js";
+import Signup from './Signup.js';
+import Input from "./Input";
 
 function App() {
 
@@ -38,6 +41,7 @@ function App() {
   return (
     <BrowserRouter>
     <Navbar />
+    <Input />
     <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/about" element={<About />} />
@@ -52,6 +56,8 @@ function App() {
           />
           <Route path="assessment-draft" element={<ViewAssessmentDraft assessmentQuestions={assessmentQuestions} deleteQuestion={deleteQuestion} />
           }/>
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/Login" element={<Login />} />
     </Routes>
     {/* <button onClick={() => setIsOpen(true)}>
         Click me</button>
