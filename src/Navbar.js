@@ -4,7 +4,6 @@ import {BiMenu} from 'react-icons/bi';
 import { useState } from 'react';
 import "./Navbar.css";
 import Logo from "./logo.png";
-
 const Navbar = () => {
     const [click, setClick] = useState(false);
     const handleClick = () => {
@@ -22,8 +21,14 @@ const Navbar = () => {
             <NavLink to="/community">
                 Community
             </NavLink>
-            <NavLink to="/Login">
-                 
+            <NavLink to="/create-assessment">
+                Create A New Assessment
+            </NavLink>
+            <NavLink to="/choose-assessment-questions">
+                Choose Questions
+            </NavLink>
+            <NavLink to="/assessment-draft">
+                View Assessment Draft
             </NavLink>
             </ul>
         </div>
@@ -37,23 +42,32 @@ const Navbar = () => {
                 </div>
                 <div className="lg:flex md:flex lg: flex-1 items-center justify-end font-normal hidden">
                     <div className="flex gap-8 mr-6 text-[18px]">
-                        <ul className="flex gap-8 mt-1">
-                        <NavLink to="/" className={"mt-1.5"}>
+                        <ul className="flex gap-2 mt-1">
+                        <NavLink to="/">
                             Dashboard
                         </NavLink>
-                        <NavLink to="/about" className={"mt-1.5"}>
+                        <NavLink to="/about">
                             About
                         </NavLink>
-                        <NavLink to="/community" className={"mt-1.5"}>
+                        <NavLink to="/community">
                             Community
                         </NavLink>
+                        <NavLink to="/create-assessment">
+                            Create A New Assessment
+                        </NavLink>
+                        <NavLink to="/choose-assessment-questions">
+                            Choose Questions
+                        </NavLink>
+                        <NavLink to="/assessment-draft">
+                            View Assessment Draft
+                        </NavLink>
                         </ul>
-                        <NavLink to="/Login" className={"border-2 rounded-full border-indigo-400 p-1.5"}> Login
-                             
-                        </NavLink> 
-                            <button className="text-white rounded-full bg-indigo-400 w-28">
-                                Get Started
-                            </button>
+                        <button className="rounded-full border-indigo-400 border-solid border-2 p-1">
+                            Login
+                        </button>
+                        <button className="text-white rounded-full bg-indigo-400 w-28">
+                            Get Started
+                        </button>
                     </div>
                 </div>
                 <div>
