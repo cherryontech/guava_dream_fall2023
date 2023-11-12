@@ -31,9 +31,10 @@ const ViewAssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
 
   const valuetext = (value) => `${value}`;
 
-  const displayAssessmentQuestions = assessmentQuestions.map((question) => (
-    <div key={Date.now()}>
+  const displayAssessmentQuestions = assessmentQuestions.map((question, index) => (
+    <div key={index + 1}>
       <h3>{question.name}</h3>
+      <h4>{index + 1}/{assessmentQuestions.length + 1}</h4>
       <Slider
         aria-label="Always visible"
         defaultValue={3}

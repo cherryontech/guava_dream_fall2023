@@ -59,9 +59,6 @@ function App() {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Login" element={<Login />} />
     </Routes>
-    {/* <button onClick={() => setIsOpen(true)}>
-        Click me</button>
-      {isOpen && <Modal setIsOpen={setIsOpen} />} */}
       {isOpen && <Modal setIsOpen={setIsOpen} />}
     </BrowserRouter>
   );
