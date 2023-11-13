@@ -30,18 +30,18 @@ const Login = () => {
  
     return(
         <>
-            <div className="h-screen bg-gradient-to-l from-indigo-300 to-60% flex justify-center items-center font-dm-sans">
+            <div className="h-screen bg-gradient-to-l from-indigo-300 to-45% flex justify-center items-center font-dm-sans">
             <main className="mt-0" >        
-                <section className="flex justify-center gap-x-36 mt-0" >
-                    <div className="flex flex-col w-96 gap-y-6" >
-                        <h1 className="text-4xl font-bold text-indigo-400">{`Let's start listening to your employees`}</h1>
-                        <p className="text-sm text-align-left text-slate-500">Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.</p>
-                    <div className="mt-24">
+                <section className="flex justify-center mt-0 ml-36" >
+                    <div className="flex flex-col gap-y-6 w-4/5" >
+                        <h1 className="text-5xl font-bold text-indigo-400 w-3/5">{`Let's start listening to your employees`}</h1>
+                        <p className="text-base text-align-left text-slate-500 w-96">Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.</p>
+                    <div className="mt-12 ml-60 w-4/5">
                         <img src={ Image } alt="Three cartoon people sitting in front of a computer with lightbulbs above their heads"></img>
                     </div>
                     </div>
 
-                    <div className="flex flex-col border-4 border-none bg-white rounded-xl m-8  pl-1 pr-8 pt-10 space-y-4 w-2/4 h-96 align-center" >                                            
+                    <div className="flex flex-col border-4 border-none bg-white rounded-xl m-2 mr-24 pl-1 pr-16 pt-10 space-y-4 min-w-fit h-96 align-center" >                                            
                         <p className="text-2xl font-semi-bold text-slate-500 mt-4 pl-36"> Login to your account </p>                                                     
                         <form className="space-y-6 flex flex-col pl-16 pr-0">                                              
                             <div className="flex flex-col">
