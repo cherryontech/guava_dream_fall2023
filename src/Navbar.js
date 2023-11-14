@@ -4,6 +4,7 @@ import {BiMenu} from 'react-icons/bi';
 import { useState } from 'react';
 import "./Navbar.css";
 import Logo from "./logo.png";
+
 const Navbar = () => {
     const [click, setClick] = useState(false);
     const handleClick = () => {
@@ -62,10 +63,12 @@ const Navbar = () => {
                             View Assessment Draft
                         </NavLink>
                         </ul>
-                        <button className="rounded-full border-indigo-400 border-solid border-2 p-1">
-                            Login
+                        <button className="text-indigo-400 rounded-full border-2 border-indigo-400 bg-white w-36 h-14"> 
+                            <NavLink to="/Login">
+                                Login
+                            </NavLink>
                         </button>
-                        <button className="text-white rounded-full bg-indigo-400 w-28">
+                        <button className="text-white rounded-full bg-indigo-400 w-36 h-14">
                             Get Started
                         </button>
                     </div>
