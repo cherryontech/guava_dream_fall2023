@@ -69,7 +69,9 @@ const Navbar = () => {
                             </NavLink>
                         </button>
                         <button className="text-white rounded-full bg-indigo-400 w-36 h-14">
-                            Get Started
+                            <NavLink to="/Signup">
+                                Get Started
+                            </NavLink>
                         </button>
                     </div>
                 </div>
