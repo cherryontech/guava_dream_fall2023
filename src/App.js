@@ -12,7 +12,6 @@ import ChooseQuestions from './Pages/ChooseQuestions.js';
 import Modal from './Pages/Modal/Modal.js';
 import Login from "./Login.js";
 import Signup from './Signup.js';
-import Input from "./Input";
 
 function App() {
 
@@ -41,7 +40,6 @@ function App() {
   return (
     <BrowserRouter>
     <Navbar />
-    <Input />
     <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/about" element={<About />} />
