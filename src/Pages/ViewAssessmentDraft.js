@@ -61,4 +61,3 @@ ViewAssessmentDraft.propTypes = {
 };
 
 export default ViewAssessmentDraft;
-
