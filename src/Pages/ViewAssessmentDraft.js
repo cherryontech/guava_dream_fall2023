@@ -51,6 +51,7 @@ const ViewAssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
     <>
       <p>ViewAssessmentDraft</p>
       {displayAssessmentQuestions}
+      <button>Publish assessment</button>
     </>
   );
 };
