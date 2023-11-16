@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Image from "../Assets/Title Image.png"
 
+
 const ViewAssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
   const marks = [
     {
@@ -36,9 +37,9 @@ const ViewAssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
 
   const displayAssessmentQuestions = assessmentQuestions.map((question, index) => (
     <div key={index + 1}>
-      <h3 className='font-bold text-lg ml-8'>{question.name}</h3>
-      <h4 className='text-base ml-8'>{index + 1}/{assessmentQuestions.length + 1}</h4>
-      <Slider
+      <h3 className='font-bold text-lg ml-10'>{question.name}</h3>
+      <h4 className='text-base ml-10'>{index + 1}/{assessmentQuestions.length + 1}</h4>
+      <Slider className='ml-10'
         aria-label="Always visible"
         defaultValue={3}
         getAriaValueText={valuetext}
@@ -46,7 +47,7 @@ const ViewAssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
         valueLabelDisplay="on"
         marks={marks}
       />
-      <button type="button" onClick={() => deleteQuestion(question.id)}>Delete Question</button>
+      <button className="mt-2 ml-8 rounded-full bg-white w-24 h-10 text-xs" type="button" onClick={() => deleteQuestion(question.id)}>Delete Question</button>
     </div>
   ));
 
@@ -68,7 +69,7 @@ const ViewAssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
        name: recipientName,
        recipient: recipientEmail
       });
-      alert("email successfully sent check inbox");
+      alert("Your email has been sent!");
     } catch (error) {
       console.log(error);
     } finally {
@@ -81,7 +82,7 @@ const ViewAssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
     <>
     <main className='h-screen bg-indigo-100'>
       <div className='pt-8'>
-      <header className='w-3/5 h-32 bg-white rounded-xl ml-8 p-2'>
+      <header className='w-96 h-32 bg-white rounded-xl ml-8 p-2'>
         <div className='flex font-bold text-xl text-lightBlue-700'>
           <img src={ Image } alt="Icon of the shadow of two people"></img>
           Title:
@@ -113,7 +114,7 @@ const ViewAssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
             value={recipientEmail}
             onChange={(e) => setRecipientEmail(e.target.value)}
         />
-          <button className="mt-8 text-white rounded-full bg-indigo-400 w-36 h-14 text-s "  type="submit" disabled={loading} >Publish assessment</button>
+          <button className="mt-8 text-white rounded-full bg-indigo-400 w-36 h-14 text-s"  type="submit" disabled={loading} >Publish assessment</button>
       </form>
       </div>
     </main>
