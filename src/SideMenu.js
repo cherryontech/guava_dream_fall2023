@@ -47,16 +47,16 @@ const SideMenu = () => {
                             Dashboard
                         </NavLink>
                         </button>
-                        <div className='flex'>
-                            <img src={ AssessmentsIcon } alt="Icon of piece of paper" />
+                        <div className='flex p-2 space-x-5 items-center '>
+                            <img src={ AssessmentsIcon } alt="Icon of piece of paper" className='w-8 h-8' />
                             <h1 className='text-slate-500'>Assessments</h1>
                         </div>
-                        <NavLink to="./Pages/CreateAssessment">
-                            <img src={ CreateAssessmentIcon } alt="Icon of piece of paper with upward facing arrow" />
-                            Create Assessment
+                        <NavLink to="./Pages/CreateAssessment"className='flex p-2 space-x-6 items-center  text-slate-500'>
+                                <img src={ CreateAssessmentIcon } alt="Icon of piece of paper with upward facing arrow" className='w-8 h-8'/>
+                                Create Assessment
                         </NavLink>
-                        <NavLink to="./Resources">
-                            <img src={ ResourcesIcon } alt="Icon of lightbulb" />
+                        <NavLink to="./Resources" className='flex p-2 space-x-6 items-center text-slate-500 '>
+                            <img src={ ResourcesIcon } alt="Icon of lightbulb" className='w-8 h-8' />
                             Resources
                         </NavLink>
                         </ul>

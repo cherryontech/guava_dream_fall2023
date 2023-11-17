@@ -22,15 +22,6 @@ const Navbar = () => {
             <NavLink to="/community">
                 Community
             </NavLink>
-            <NavLink to="/create-assessment">
-                Create A New Assessment
-            </NavLink>
-            <NavLink to="/choose-assessment-questions">
-                Choose Questions
-            </NavLink>
-            <NavLink to="/assessment-draft">
-                View Assessment Draft
-            </NavLink>
             </ul>
         </div>
     </>
@@ -52,15 +43,6 @@ const Navbar = () => {
                         </NavLink>
                         <NavLink to="/community">
                             Community
-                        </NavLink>
-                        <NavLink to="/create-assessment">
-                            Create A New Assessment
-                        </NavLink>
-                        <NavLink to="/choose-assessment-questions">
-                            Choose Questions
-                        </NavLink>
-                        <NavLink to="/assessment-draft">
-                            View Assessment Draft
                         </NavLink>
                         </ul>
                         <button className="text-indigo-400 rounded-full border-2 border-indigo-400 bg-white w-36 h-14"> 
