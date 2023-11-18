@@ -12,6 +12,7 @@ import ChooseQuestions from './Pages/ChooseQuestions.js';
 import Modal from './Pages/Modal/Modal.js';
 import Login from "./Login.js";
 import Signup from './Signup.js';
+import SideMenu from './SideMenu.js';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
   return (
     <BrowserRouter>
     <Navbar />
+    <SideMenu />
     <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/about" element={<About />} />
