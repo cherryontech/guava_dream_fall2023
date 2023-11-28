@@ -33,9 +33,9 @@ const SideMenu = () => {
     </>
     return (
         <sidebar>
-            <div className="flex flex-col justify-between tc  m-3">
-                <div className="flex flex-col items-start flex-1 mb-2">
-                <img src={ LogoIcon } className="w-12 m-12" alt="EquiVate logo, pen inside of box" />
+            <div className="flex flex-col justify-between tc m-6">
+                <div className="flex flex-col justify-self-center flex-1 mb-2">
+                <img src={ LogoIcon } className="ml-20 w-12 m-12" alt="EquiVate logo, pen inside of box" />
                 </div>
                 <div className=" md:flex lg: flex-1 items-center font-normal hidden">
                     <div className="flex gap-8 mr-6 text-[18px]">
@@ -43,20 +43,19 @@ const SideMenu = () => {
                         <button className="flex justify-start self-center items-center text-white rounded-full bg-indigo-400 w-48 h-16 p-2 font-bold">
                             <img className="w-8 h-8 mr-4"src={ DashboardIcon } alt="icon square with four circles inside" />
                         <NavLink to="./Pages/Dashboard" className="flex">
-
                             Dashboard
                         </NavLink>
                         </button>
-                        <div className='flex p-2 space-x-5 items-center '>
-                            <img src={ AssessmentsIcon } alt="Icon of piece of paper" className='w-8 h-8' />
-                            <h1 className='text-slate-500'>Assessments</h1>
-                        </div>
+                        <NavLink to="./Pages/Assessments"className='flex p-2 space-x-6 items-center  text-slate-500'>
+                                <img src={ AssessmentsIcon } alt="Icon of piece of paper with upward facing arrow" className='w-8 h-8 mr-2'/>
+                                Assessments
+                        </NavLink>
                         <NavLink to="./Pages/CreateAssessment"className='flex p-2 space-x-6 items-center  text-slate-500'>
-                                <img src={ CreateAssessmentIcon } alt="Icon of piece of paper with upward facing arrow" className='w-8 h-8'/>
+                                <img src={ CreateAssessmentIcon } alt="Icon of piece of paper with upward facing arrow" className='w-8 h-8 mr-2'/>
                                 Create Assessment
                         </NavLink>
                         <NavLink to="./Resources" className='flex p-2 space-x-6 items-center text-slate-500 '>
-                            <img src={ ResourcesIcon } alt="Icon of lightbulb" className='w-8 h-8' />
+                            <img src={ ResourcesIcon } alt="Icon of lightbulb" className='w-8 h-8 mr-2' />
                             Resources
                         </NavLink>
                         </ul>
