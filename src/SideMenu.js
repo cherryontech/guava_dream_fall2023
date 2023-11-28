@@ -9,12 +9,16 @@ import  CreateAssessmentIcon  from "./Assets/Create Assessment Icon.png";
 import  ResourcesIcon  from "./Assets/Resources Icon.png";
 
 const SideMenu = () => {
+
     const [click, setClick] = useState(false);
     const handleClick = () => {
         setClick(!click);
     }
+
+  
+
     const content = <>
-        <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-slate-900 transition tc mt-5 bg-white">
+        <div className="lg:hidden block absolute inset-y-0  top-0 h-full left-0 bg-slate-900 transition tc mt-5 bg-white">
             <ul className="text-center text-xl p-15 flex flex-col">
             <NavLink to="./Pages/Dashboard">
                 Dashboard
@@ -30,10 +34,11 @@ const SideMenu = () => {
             </NavLink>
             </ul>
         </div>
-    </>
+    </> 
     return (
+        
         <sidebar>
-            <div className="flex flex-col justify-between tc m-6">
+            <div className="flex flex-col justify-between tc m-6 inset-y-0 max-w-max">
                 <div className="flex flex-col justify-self-center flex-1 mb-2">
                 <img src={ LogoIcon } className="ml-20 w-12 m-12" alt="EquiVate logo, pen inside of box" />
                 </div>
@@ -58,19 +63,22 @@ const SideMenu = () => {
                             <img src={ ResourcesIcon } alt="Icon of lightbulb" className='w-8 h-8 mr-2' />
                             Resources
                         </NavLink>
+                        <button className="text-indigo-400 rounded-full border-2 border-indigo-400 bg-white w-24 h-10 text-xs mt-6 ml-12 "> 
+                            <NavLink to="/Home">
+                                Logout
+                            </NavLink>
+                        </button>
                         </ul>
                     </div>
                 </div>
                 <div>
                     {click && content}
                 </div>
-
                 <button className="text-3xl  block sm:hidden transtion" onClick={handleClick}>
                     {click ? <FaTimes/> : < BiMenu/>}
                 </button>
             </div>
         </sidebar>
     )
-}
-
+} 
 export default SideMenu;

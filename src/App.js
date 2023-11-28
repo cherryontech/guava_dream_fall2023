@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
-import Navbar from './Navbar';
 import './Firebase.js';
 import Dashboard from "./Pages/Dashboard/Dashboard.js";
 import About from "./About";
@@ -12,7 +11,8 @@ import ChooseQuestions from './Pages/ChooseQuestions.js';
 import Modal from './Pages/Modal/Modal.js';
 import Login from "./Login.js";
 import Signup from './Signup.js';
-import SideMenu from './SideMenu.js';
+//import Navbar from './Navbar.js'
+
 
 function App() {
 
@@ -40,8 +40,6 @@ function App() {
   };
   return (
     <BrowserRouter>
-    <Navbar />
-    <SideMenu />
     <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/about" element={<About />} />
