@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import './Firebase.js';
 import Dashboard from "./Pages/Dashboard/Dashboard.js";
 import About from "./About";
-import Community from "./Community";
+import Employee from "./Employee";
 import ViewAssessmentDraft from './Pages/ViewAssessmentDraft.js';
 import CreateAssessment from './Pages/CreateAssessment.js';
 import ChooseQuestions from './Pages/ChooseQuestions.js';
@@ -45,9 +45,8 @@ function App() {
     <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/about" element={<About />} />
-          <Route path="/community" element={<Community />} />
+          <Route path="/Employee" element={<Employee />} />
           <Route path="create-assessment" element={<CreateAssessment displayQuestions={displayQuestions}/>} />
-          {/* eslint-disable-next-line max-len */ }
           <Route path="choose-assessment-questions" element={
             <ChooseQuestions 
               selectedFields={selectedFields}

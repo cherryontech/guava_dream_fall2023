@@ -25,7 +25,7 @@ const SideMenu = () => {
             <NavLink to="./Pages/CreateAssessment">
                 Create Assessment
             </NavLink>
-            <NavLink to="/Resources">
+            <NavLink to="./Pages/Employee/Main">
                 Resources
             </NavLink>
             </ul>
@@ -55,7 +55,7 @@ const SideMenu = () => {
                                 <img src={ CreateAssessmentIcon } alt="Icon of piece of paper with upward facing arrow" className='w-8 h-8'/>
                                 Create Assessment
                         </NavLink>
-                        <NavLink to="./Resources" className='flex p-2 space-x-6 items-center text-slate-500 '>
+                        <NavLink to="./Pages/Employee/Main" className='flex p-2 space-x-6 items-center text-slate-500 '>
                             <img src={ ResourcesIcon } alt="Icon of lightbulb" className='w-8 h-8' />
                             Resources
                         </NavLink>
