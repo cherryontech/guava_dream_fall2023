@@ -1,4 +1,3 @@
-import Navbar from "../Navbar"
 import { NavLink } from 'react-router-dom';
 import HomeImage from "../Assets/Home-image.png"
 
@@ -10,7 +9,6 @@ const Home = () => {
 
     return (
         <div>
-            <Navbar />
             <section className="flex justify-center m-12" >
                 <div className="flex flex-col w-1/3 mt-32">
                     <h1 className="text-indigo-400 text-6xl font-semibold pb-4">Your workplace equity navigator</h1>

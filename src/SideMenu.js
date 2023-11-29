@@ -33,10 +33,10 @@ const SideMenu = () => {
     const content = <>
         <div className="lg:hidden block absolute inset-y-0  top-0 h-full left-0 bg-slate-900 transition tc mt-5 bg-white">
             <ul className="text-center text-xl p-15 flex flex-col">
-            <NavLink to="dashboard">
+            <NavLink to="/dashboard">
                 Dashboard
             </NavLink>
-            <NavLink to="assessments">
+            <NavLink to="/assessments">
                 Assessments
             </NavLink>
             <NavLink to="/create-assessment">
@@ -52,11 +52,7 @@ const SideMenu = () => {
         
         <sidebar>
             <div className="flex flex-col justify-between tc m-6 inset-y-0 max-w-max">
-                <NavLink to="/">
-                <div className="flex flex-col justify-self-center flex-1 mb-2">
-                <img src={ LogoIcon } className="ml-20 w-12 m-12" alt="EquiVate logo, pen inside of box" />
-                </div>
-                </NavLink>
+                
                 <div className=" md:flex lg: flex-1 items-center font-normal hidden">
                     <div className="flex gap-8 mr-6 text-[18px]">
                         <ul className="flex flex-col gap-2 mt-1">
@@ -93,6 +89,13 @@ const SideMenu = () => {
                     {click ? <FaTimes/> : < BiMenu/>}
                 </button>
             </div>
+
+            <NavLink to="/">
+                <div className="flex flex-col justify-self-center flex-1 mb-2">
+                <img src={ LogoIcon } className="ml-28 w-12 m-12 sticky-bottom" alt="EquiVate logo, pen inside of box" />
+                </div>
+            </NavLink>
+
         </sidebar>
     )
     }
