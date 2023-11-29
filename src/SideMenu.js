@@ -1,7 +1,9 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import {FaTimes} from 'react-icons/fa';
 import {BiMenu} from 'react-icons/bi';
 import { useState } from 'react';
+import { signOut } from "firebase/auth"
+import {auth} from "./Firebase"
 import  LogoIcon  from "./Assets/Logo-icon.png";
 import  DashboardIcon  from "./Assets/Dashboard icon.png";
 import  AssessmentsIcon  from "./Assets/Assessments Icon.png";
@@ -15,7 +17,18 @@ const SideMenu = () => {
         setClick(!click);
     }
 
-  
+    
+    const navigate = useNavigate();
+ 
+    const handleLogout = () => {               
+        signOut(auth).then(() => {
+        // Sign-out successful.
+            navigate("/");
+            console.log("Signed out successfully")
+        }).catch((error) => {
+            console.error("Error occured during sign-out:", error);
+        });
+    }
 
     const content = <>
         <div className="lg:hidden block absolute inset-y-0  top-0 h-full left-0 bg-slate-900 transition tc mt-5 bg-white">
@@ -63,10 +76,8 @@ const SideMenu = () => {
                             <img src={ ResourcesIcon } alt="Icon of lightbulb" className='w-8 h-8 mr-2' />
                             Resources
                         </NavLink>
-                        <button className="text-indigo-400 rounded-full border-2 border-indigo-400 bg-white w-24 h-10 text-xs mt-6 ml-12 "> 
-                            <NavLink to="/Home">
-                                Logout
-                            </NavLink>
+                        <button className="text-indigo-400 rounded-full border-2 border-indigo-400 bg-white w-24 h-10 text-xs mt-6 ml-12" onClick={handleLogout}> 
+                            Logout
                         </button>
                         </ul>
                     </div>
@@ -80,5 +91,5 @@ const SideMenu = () => {
             </div>
         </sidebar>
     )
-} 
+    }
 export default SideMenu;
