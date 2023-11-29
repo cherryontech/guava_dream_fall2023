@@ -11,7 +11,8 @@ import ChooseQuestions from './Pages/ChooseQuestions.js';
 import Modal from './Pages/Modal/Modal.js';
 import Login from "./Login.js";
 import Signup from './Signup.js';
-//import Navbar from './Navbar.js'
+import Home from './Pages/Home.js';
+
 
 
 function App() {
@@ -41,7 +42,8 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/about" element={<About />} />
           <Route path="/community" element={<Community />} />
           <Route path="create-assessment" element={<CreateAssessment displayQuestions={displayQuestions}/>} />

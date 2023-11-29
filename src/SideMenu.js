@@ -52,7 +52,7 @@ const SideMenu = () => {
         
         <sidebar>
             <div className="flex flex-col justify-between tc m-6 inset-y-0 max-w-max">
-                <NavLink to="/Home">
+                <NavLink to="/">
                 <div className="flex flex-col justify-self-center flex-1 mb-2">
                 <img src={ LogoIcon } className="ml-20 w-12 m-12" alt="EquiVate logo, pen inside of box" />
                 </div>

@@ -13,7 +13,7 @@ const Navbar = () => {
     const content = <>
         <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-slate-900 transition tc mt-5 bg-white">
             <ul className="text-center text-xl p-15 flex flex-col">
-            <NavLink to="/">
+            <NavLink to="/dashboard">
                 Dashboard
             </NavLink>
             <NavLink to="/about">
@@ -35,7 +35,7 @@ const Navbar = () => {
                 <div className="lg:flex md:flex lg: flex-1 items-center justify-end font-normal hidden">
                     <div className="flex gap-8 mr-6 text-[18px]">
                         <ul className="flex gap-2 mt-1">
-                        <NavLink to="/">
+                        <NavLink to="/dashboard">
                             Dashboard
                         </NavLink>
                         <NavLink to="/about">
