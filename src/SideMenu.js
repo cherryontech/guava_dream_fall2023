@@ -4,7 +4,7 @@ import {BiMenu} from 'react-icons/bi';
 import { useState } from 'react';
 import { signOut } from "firebase/auth"
 import {auth} from "./Firebase"
-import  LogoIcon  from "./Assets/Logo-icon.png";
+//import  LogoIcon  from "./Assets/Logo-icon.png";
 import  DashboardIcon  from "./Assets/Dashboard icon.png";
 import  AssessmentsIcon  from "./Assets/Assessments Icon.png";
 import  CreateAssessmentIcon  from "./Assets/Create Assessment Icon.png";
@@ -32,7 +32,7 @@ const SideMenu = () => {
 
     const content = <>
         <div className="lg:hidden block absolute inset-y-0  top-0 h-full left-0 bg-slate-900 transition tc mt-5 bg-white">
-            <ul className="text-center text-xl p-15 flex flex-col">
+            <ul className="text-center p-15 flex flex-col">
             <NavLink to="/dashboard">
                 Dashboard
             </NavLink>
@@ -51,7 +51,7 @@ const SideMenu = () => {
     return (
         
         <sidebar>
-            <div className="flex flex-col justify-between tc m-6 inset-y-0 max-w-max">
+            <div className="flex flex-col justify-between tc m-6 inset-y-0 max-w-max max-h-screen">
                 
                 <div className=" md:flex lg: flex-1 items-center font-normal hidden">
                     <div className="flex gap-8 mr-6 text-[18px]">
@@ -62,19 +62,19 @@ const SideMenu = () => {
                             Dashboard
                         </NavLink>
                         </button>
-                        <NavLink to="/assessments"className='flex p-2 space-x-6 items-center  text-slate-500'>
+                        <NavLink to="/assessments"className='flex p-2 space-x-6 items-center text-base text-slate-500'>
                                 <img src={ AssessmentsIcon } alt="Icon of piece of paper with upward facing arrow" className='w-8 h-8 mr-2'/>
                                 Assessments
                         </NavLink>
-                        <NavLink to="/create-assessment"className='flex p-2 space-x-6 items-center  text-slate-500'>
+                        <NavLink to="/create-assessment"className='flex p-2 space-x-6 items-center text-base text-slate-500'>
                                 <img src={ CreateAssessmentIcon } alt="Icon of piece of paper with upward facing arrow" className='w-8 h-8 mr-2'/>
                                 Create Assessment
                         </NavLink>
-                        <NavLink to="/resources" className='flex p-2 space-x-6 items-center text-slate-500 '>
+                        <NavLink to="/resources" className='flex p-2 space-x-6 items-center text-base text-slate-500 '>
                             <img src={ ResourcesIcon } alt="Icon of lightbulb" className='w-8 h-8 mr-2' />
                             Resources
                         </NavLink>
-                        <button className="text-indigo-400 rounded-full border-2 border-indigo-400 bg-white w-24 h-10 text-xs mt-6 ml-12" onClick={handleLogout}> 
+                        <button className="text-indigo-400 rounded-full border-2 border-indigo-400 bg-white w-24 h-10 text-xs mt-36 ml-16 absolute bottom-2" onClick={handleLogout}> 
                         <NavLink to="/community"> 
                             Logout
                         </NavLink>   
@@ -90,11 +90,7 @@ const SideMenu = () => {
                 </button>
             </div>
 
-            <NavLink to="/">
-                <div className="flex flex-col justify-self-center flex-1 mb-2">
-                <img src={ LogoIcon } className="ml-28 w-12 m-12 sticky-bottom" alt="EquiVate logo, pen inside of box" />
-                </div>
-            </NavLink>
+           
 
         </sidebar>
     )
