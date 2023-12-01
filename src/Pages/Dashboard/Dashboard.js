@@ -1,8 +1,11 @@
+import SideMenu from "../../SideMenu";
 import "./Dashboard.css";
+
 
 const Dashboard = () => {
     return (
-        <div className="page">
+        <div className="flex max-w-max">
+            <SideMenu />
             <section className="dashboard-container">
                 <div className="top-row">
                     <h1 className="welcome-box">Hello!</h1>
@@ -17,6 +20,8 @@ const Dashboard = () => {
                 </div>
             </section>
         </div>
+
+       
     )
 }
 

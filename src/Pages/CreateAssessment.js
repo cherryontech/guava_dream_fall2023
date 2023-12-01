@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import AssessmentTopics from './AssessmentTopics';
 import topicsData from '../data/topics';
+import SideMenu from '../SideMenu';
 
 const CreateAssessment = ({ displayQuestions }) => {
   const [selectedTopics, setSelectedTopics] = useState([]);
@@ -31,6 +32,7 @@ const CreateAssessment = ({ displayQuestions }) => {
 
   return (
     <section>
+      <SideMenu />
       <div className="bg-white w-2/3 rounded-xl py-3.5 px-3 m-4">
         <h3 className="text-blue">Create Assessment</h3>
         <p>Select what you want to discover about you team</p>
@@ -56,4 +58,3 @@ CreateAssessment.propTypes = {
 };
 
 export default CreateAssessment;
-
