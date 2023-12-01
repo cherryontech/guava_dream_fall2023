@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
-import Navbar from './Navbar';
 import './Firebase.js';
 import Dashboard from "./Pages/Dashboard/Dashboard.js";
 import About from "./About";
@@ -12,7 +11,12 @@ import ChooseQuestions from './Pages/ChooseQuestions.js';
 import Modal from './Pages/Modal/Modal.js';
 import Login from "./Login.js";
 import Signup from './Signup.js';
-import SideMenu from './SideMenu.js';
+import Home from './Pages/Home.js';
+import Assessments from "./Pages/Assessments.js";
+import Resources from "./Pages/Resources.js";
+import Navbar from './Navbar.js';
+
+
 
 function App() {
 
@@ -39,29 +43,34 @@ function App() {
     setAssessmentQuestions(filteredQuestions);
   };
   return (
-    <BrowserRouter>
-    <Navbar />
-    <SideMenu />
-    <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/community" element={<Community />} />
-          <Route path="create-assessment" element={<CreateAssessment displayQuestions={displayQuestions}/>} />
-          {/* eslint-disable-next-line max-len */ }
-          <Route path="choose-assessment-questions" element={
-            <ChooseQuestions 
-              selectedFields={selectedFields}
-              addQuestionsToAssessment={addQuestionsToAssessment} 
-            />} 
-          />
-          <Route path="assessment-draft" element={<ViewAssessmentDraft assessmentQuestions={assessmentQuestions} deleteQuestion={deleteQuestion} />
-          }/>
-          <Route path="/Signup" element={<Signup />} />
-          <Route path="/Login" element={<Login />} />
-    </Routes>
-      {isOpen && <Modal setIsOpen={setIsOpen} />}
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+      <Navbar />
+      <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/community" element={<Community />} />
+            <Route path="/assessments" element={<Assessments />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="create-assessment" element={<CreateAssessment displayQuestions={displayQuestions}/>} />
+            {/* eslint-disable-next-line max-len */ }
+            <Route path="choose-assessment-questions" element={
+              <ChooseQuestions 
+                selectedFields={selectedFields}
+                addQuestionsToAssessment={addQuestionsToAssessment} 
+              />} 
+            />
+            <Route path="assessment-draft" element={<ViewAssessmentDraft assessmentQuestions={assessmentQuestions} deleteQuestion={deleteQuestion} />
+            }/>
+            <Route path="/Signup" element={<Signup />} />
+            <Route path="/Login" element={<Login />} />
+      </Routes>
+        {isOpen && <Modal setIsOpen={setIsOpen} />}
+      </BrowserRouter>
+      </div>
   );
+
     
 }
 
