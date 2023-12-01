@@ -1,3 +1,7 @@
+## About
+
+For HR departments looking to decrease or eliminate the phenomenon of imposter syndrome in their companies, EquiVate is an assessment and employee reporting tool that enables organizations to take a temperature on imposter syndrome, and take data-driven action to fix it. Unlike other HR assessment tools, EquiVate focuses on authentic, transparent employee experience, and facilitates a safe space for employees to share honestly and review company data and initiatives. 
+
 # Live demo
 
 [https://equivate.netlify.app/]
