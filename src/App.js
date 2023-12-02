@@ -4,7 +4,7 @@ import './App.css';
 import './Firebase.js';
 import Dashboard from "./Pages/Dashboard/Dashboard.js";
 import About from "./About";
-import Employee from "./Employee";
+import Community from "./Community";
 import ViewAssessmentDraft from './Pages/ViewAssessmentDraft.js';
 import CreateAssessment from './Pages/CreateAssessment.js';
 import ChooseQuestions from './Pages/ChooseQuestions.js';
