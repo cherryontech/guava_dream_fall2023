@@ -1,5 +1,3 @@
-import "./Pages/Dashboard/Dashboard.css"
-
 const About = () => {
     return (
         <section className="dashboard-page">
