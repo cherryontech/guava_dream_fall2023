@@ -15,6 +15,7 @@ import Home from './Pages/Home.js';
 import Assessments from "./Pages/Assessments.js";
 import Resources from "./Pages/Resources.js";
 import Navbar from './Navbar.js';
+import { Preview } from './Pages/Employee/Preview';
 
 
 
@@ -49,6 +50,7 @@ function App() {
       <Navbar />
       <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/preview" element={<Preview />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/about" element={<About />} />
             <Route path="/community" element={<Community />} />
