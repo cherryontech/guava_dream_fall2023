@@ -31,12 +31,15 @@ const CreateAssessment = ({ displayQuestions }) => {
   };
 
   return (
-    <section>
+    
+    <section className='flex flex-wrap '>
       <SideMenu />
-      <div className="bg-white w-2/3 rounded-xl py-3.5 px-3 m-4">
-        <h3 className="text-blue">Create Assessment</h3>
-        <p>Select what you want to discover about you team</p>
-      </div>
+      <div className='flex flex-col bg-indigo-100 p-3'>
+        <div className="bg-white h-20 w-2/3 rounded-xl py-3.5 px-3 m-4">
+          <h3 className="text-indigo-400 text-xl font-semibold ">Create Assessment</h3>
+          <p className='text-xs mt-2'>Select what you want to discover about you team</p>
+        </div>
+      
       <form
         className="grid grid-cols-3 gap-4 h-full m-4"
         onSubmit={(e) => formSubmitHandler(e)}
@@ -44,11 +47,12 @@ const CreateAssessment = ({ displayQuestions }) => {
         {topicsMap}
         <button
           type="submit"
-          className="bg-white text-blue rounded-md shadow-lg absolute top-0 right-0 h-16 w-16"
+          className="bg-white text-slate-500 rounded-full border-slate-500 border shadow-lg absolute top-40 right-24 h-14 w-24"
           >
           Submit
         </button>
       </form>
+      </div>
     </section>
   );
 };
