@@ -66,7 +66,7 @@ function App() {
             <Route path="/Signup" element={<Signup />} />
             <Route path="/Login" element={<Login />} />
       </Routes>
-        {isOpen && <Modal setIsOpen={setIsOpen} />}
+        {isOpen && <Modal isOpen={isOpen} setIsOpen={setIsOpen} />}
       </BrowserRouter>
       </div>
   );
