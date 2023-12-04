@@ -15,6 +15,7 @@ import Home from './Pages/Home.js';
 import Assessments from "./Pages/Assessments.js";
 import Resources from "./Pages/Resources.js";
 import Navbar from './Navbar.js';
+import { Preview } from './Pages/Employee/Preview';
 
 
 
@@ -43,18 +44,19 @@ function App() {
     setAssessmentQuestions(filteredQuestions);
   };
   return (
+
     <div>
       <BrowserRouter>
       <Navbar />
       <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/preview" element={<Preview />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/about" element={<About />} />
             <Route path="/community" element={<Community />} />
             <Route path="/assessments" element={<Assessments />} />
             <Route path="/resources" element={<Resources />} />
-            <Route path="create-assessment" element={<CreateAssessment displayQuestions={displayQuestions}/>} />
-            {/* eslint-disable-next-line max-len */ }
+            <Route path="create-assessment" element={<CreateAssessment displayQuestions={displayQuestions}/>} /> 
             <Route path="choose-assessment-questions" element={
               <ChooseQuestions 
                 selectedFields={selectedFields}
