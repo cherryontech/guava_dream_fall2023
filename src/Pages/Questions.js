@@ -5,6 +5,7 @@ const Questions = ({ questions, targetedTopic, addQuestionsToAssessment }) => {
   const [clickedIndexes, setClickedIndexes] = useState([]);
 
   const handleButtonClick = (question, index) =>{
+    console.log("Button clicked", question, index)
     addQuestionsToAssessment(question);
     setClickedIndexes((prevIndexes) => [...prevIndexes, index]);
   }

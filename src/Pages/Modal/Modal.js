@@ -1,4 +1,4 @@
-import './Modal.css';
+//import './Modal.css';
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -9,12 +9,13 @@ const Modal = ({isOpen, setIsOpen}) => {
       console.log("Modal open")
     }
   }, [isOpen]);
+  
   return (
     <>
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-8 rounded-md max-w-2xl">
-            <h5 className="text-lg text-left font-bold pb-2 w-96">
+            <h5 className="text-lg text-left font-bold pb-2">
               Would you like to continue to the assessment page or add more questions?
             </h5>
             <div className="flex justify-start gap-10">
