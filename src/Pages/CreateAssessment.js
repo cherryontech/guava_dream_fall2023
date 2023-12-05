@@ -49,15 +49,15 @@ const CreateAssessment = ({ displayQuestions }) => {
           onSubmit={(e) => formSubmitHandler(e)}
         >
           {topicsMap}
-          
-        </form>
-        </div>
         <button
             type="submit"
             className="bg-white text-slate-500 rounded-full border-slate-500 border shadow-lg m-4 h-14 w-28"
             >
             Submit
           </button>
+        </form>
+        </div>
+        
       </div>
     </section>
   );

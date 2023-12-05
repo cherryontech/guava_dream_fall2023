@@ -1,228 +1,150 @@
 const topicsData = [
   {
-    name: 'Employee Satisfaction',
-    id: 'employee-satisfaction',
+    name: 'Imposter Syndrome',
+    id: 'imposter-syndrome',
     subTopics: [
       {
-        name: 'Topic 5',
+        name: 'Recognization and Reward',
         inquiries: [
           {
-            name: 'Question-1',
-            id: 'employee-satisfaction-t5-question-1',
+            name: 'How Do You Feel About Your Contributions to the Team?',
+            id: 'imposter-syndrome-t5-question-1',
           },
           {
             name: 'Question-2',
-            id: 'employee-satisfaction-t5-question-2',
+            id: 'imposter-syndrome-t5-question-2',
           },
           {
             name: 'Question-3',
-            id: 'employee-satisfaction-t5-question-3',
+            id: 'imposter-syndrome-t5-question-3',
           },
         ],
       },
       {
-        name: 'Topic 6',
+        name: 'Asking for Help',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'employee-satisfaction-t6-question-1',
+            id: 'imposter-syndrome-t6-question-1',
           },
           {
             name: 'Question-2',
-            id: 'employee-satisfaction-t6-question-2',
+            id: 'imposter-syndrome-t6-question-2',
           },
           {
             name: 'Question-3',
-            id: 'employee-satisfaction-t6-question-3',
+            id: 'imposter-syndrome-t6-question-3',
           },
         ],
       },
       {
-        name: 'Topic 7',
+        name: 'Pressure and Effort',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'employee-satisfaction-t7-question-1',
+            id: 'imposter-syndrome-t7-question-1',
           },
           {
             name: 'Question-2',
-            id: 'employee-satisfaction-t7-question-2',
+            id: 'imposter-syndrome-t7-question-2',
           },
           {
             name: 'Question-3',
-            id: 'employee-satisfaction-t7-question-3',
+            id: 'imposter-syndrome-t7-question-3',
           },
         ],
       },
       {
-        name: 'Topic 8',
+        name: 'Awareness',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'employee-satisfaction-t8-question-1',
+            id: 'imposter-syndrome-t8-question-1',
           },
           {
             name: 'Question-2',
-            id: 'employee-satisfaction-t8-question-2',
+            id: 'imposter-syndrome-t8-question-2',
           },
           {
             name: 'Question-3',
-            id: 'employee-satisfaction-t8-question-3',
+            id: 'imposter-syndrome-t8-question-3',
           },
         ],
       },
     ],
   },
   {
-    name: 'Mental Health',
-    id: 'mental-health',
+    name: 'Sexism',
+    id: 'sexism',
     subTopics: [
       {
-        name: 'Topic 9',
+        name: 'Parental Leave',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'mental-health-t9-question-1',
+            id: 'sexism-t9-question-1',
           },
           {
             name: 'Question-2',
-            id: 'mental-health-t9-question-2',
+            id: 'sexism-t9-question-2',
           },
           {
             name: 'Question-3',
-            id: 'mental-health-t9-question-3',
+            id: 'sexism-t9-question-3',
           },
         ],
 
       },
       {
-        name: 'Topic 10',
+        name: 'Women in the Workplace',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'mental-health-t10-question-1',
+            id: 'sexism-t10-question-1',
           },
           {
             name: 'Question-2',
-            id: 'mental-health-t10-question-2',
+            id: 'sexism-t10-question-2',
           },
           {
             name: 'Question-3',
-            id: 'mental-health-t10-question-3',
+            id: 'sexism-t10-question-3',
           },
         ],
 
       },
       {
-        name: 'Topic 11',
+        name: 'Bias',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'mental-health-t11-question-1',
+            id: 'sexism-t11-question-1',
           },
           {
             name: 'Question-2',
-            id: 'mental-health-t11-question-2',
+            id: 'sexism-t11-question-2',
           },
           {
             name: 'Question-3',
-            id: 'mental-health-t11-question-3',
+            id: 'sexism-t11-question-3',
           },
         ],
 
       },
       {
-        name: 'Topic 12',
+        name: 'Inclusivity',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'mental-health-t12-question-1',
+            id: 'sexism-t12-question-1',
           },
           {
             name: 'Question-2',
-            id: 'mental-health-t12-question-2',
+            id: 'sexism-t12-question-2',
           },
           {
             name: 'Question-3',
-            id: 'mental-health-t12-question-3',
-          },
-        ],
-
-      },
-    ],
-  },
-  {
-    name: 'Employee Engagement',
-    id: 'employee-engagement',
-    subTopics: [
-      {
-        name: 'Topic 13',
-        inquiries: [
-          {
-            name: 'Question-1',
-            id: 'employee-engagement-t13-question-1',
-          },
-          {
-            name: 'Question-2',
-            id: 'employee-engagement-t13-question-2',
-          },
-          {
-            name: 'Question-3',
-            id: 'employee-engagement-t13-question-3',
-          },
-        ],
-
-      },
-      {
-        name: 'Topic 14',
-        inquiries: [
-          {
-            name: 'Question-1',
-            id: 'employee-engagement-t14-question-1',
-          },
-          {
-            name: 'Question-2',
-            id: 'employee-engagement-t14-question-2',
-          },
-          {
-            name: 'Question-3',
-            id: 'employee-engagement-t14-question-3',
-          },
-        ],
-
-      },
-      {
-        name: 'Topic 15',
-        inquiries: [
-          {
-            name: 'Question-1',
-            id: 'employee-engagement-t15-question-1',
-          },
-          {
-            name: 'Question-2',
-            id: 'employee-engagement-t15-question-2',
-          },
-          {
-            name: 'Question-3',
-            id: 'employee-engagement-t15-question-3',
-          },
-        ],
-
-      },
-      {
-        name: 'Topic 16',
-        inquiries: [
-          {
-            name: 'Question-1',
-            id: 'employee-engagement-t16-question-1',
-          },
-          {
-            name: 'Question-2',
-            id: 'employee-engagement-t16-question-2',
-          },
-          {
-            name: 'Question-3',
-            id: 'employee-engagement-t16-question-3',
+            id: 'sexism-t12-question-3',
           },
         ],
 
@@ -230,77 +152,77 @@ const topicsData = [
     ],
   },
   {
-    name: 'Diversity, Equity and Inclusion',
-    id: 'dei',
+    name: 'Psychological Safety',
+    id: 'psychological-safety',
     subTopics: [
       {
-        name: 'Topic 17',
+        name: 'Anxiety',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'dei-t17-question-1',
+            id: 'psychological-safety-t13-question-1',
           },
           {
             name: 'Question-2',
-            id: 'dei-t17-question-2',
+            id: 'psychological-safety-t13-question-2',
           },
           {
             name: 'Question-3',
-            id: 'dei-t17-question-3',
+            id: 'psychological-safety-t13-question-3',
           },
         ],
 
       },
       {
-        name: 'Topic 18',
+        name: 'Loneliness',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'dei-t18-question-1',
+            id: 'psychological-safety-t14-question-1',
           },
           {
             name: 'Question-2',
-            id: 'dei-t18-question-2',
+            id: 'psychological-safety-t14-question-2',
           },
           {
             name: 'Question-3',
-            id: 'dei-t18-question-3',
+            id: 'psychological-safety-t14-question-3',
           },
         ],
 
       },
       {
-        name: 'Topic 19',
+        name: 'Trauma',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'dei-t19-question-1',
+            id: 'psychological-safety-t15-question-1',
           },
           {
             name: 'Question-2',
-            id: 'dei-t19-question-2',
+            id: 'psychological-safety-t15-question-2',
           },
           {
             name: 'Question-3',
-            id: 'dei-t19-question-3',
+            id: 'psychological-safety-t15-question-3',
           },
         ],
 
       },
       {
-        name: 'Topic 20',
+        name: 'Impact on Performance',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'dei-t20-question-1',
+            id: 'psychological-safety-t16-question-1',
           },
           {
             name: 'Question-2',
-            id: 'dei-t20-question-2',
+            id: 'psychological-safety-t16-question-2',
           },
           {
             name: 'Question-3',
-            id: 'dei-t20-question-3',
+            id: 'psychological-safety-t16-question-3',
           },
         ],
 
@@ -308,77 +230,77 @@ const topicsData = [
     ],
   },
   {
-    name: 'Employee Experience',
-    id: 'employee-experience',
+    name: 'Connectivity',
+    id: 'connectivity',
     subTopics: [
       {
-        name: 'Topic 21',
+        name: 'Open Communication',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'employee-experience-t21-question-1',
+            id: 'connectivity-t17-question-1',
           },
           {
             name: 'Question-2',
-            id: 'employee-experience-t21-question-2',
+            id: 'connectivity-t17-question-2',
           },
           {
             name: 'Question-3',
-            id: 'employee-experience-t21-question-3',
+            id: 'connectivity-t17-question-3',
           },
         ],
 
       },
       {
-        name: 'Topic 22',
+        name: 'Fear of Retribution',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'employee-experience-t22-question-1',
+            id: 'connectivity-t18-question-1',
           },
           {
             name: 'Question-2',
-            id: 'employee-experience-t22-question-2',
+            id: 'connectivity-t18-question-2',
           },
           {
             name: 'Question-3',
-            id: 'employee-experience-t22-question-3',
+            id: 'connectivity-t18-question-3',
           },
         ],
 
       },
       {
-        name: 'Topic 23',
+        name: 'Speaking Up and Managerial Support',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'employee-experience-t23-question-1',
+            id: 'connectivity-t19-question-1',
           },
           {
             name: 'Question-2',
-            id: 'employee-experience-t23-question-2',
+            id: 'connectivity-t19-question-2',
           },
           {
             name: 'Question-3',
-            id: 'employee-experience-t23-question-3',
+            id: 'connectivity-t19-question-3',
           },
         ],
 
       },
       {
-        name: 'Topic 24',
+        name: 'Perceieved Consequences',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'employee-experience-t24-question-1',
+            id: 'connectivity-t20-question-1',
           },
           {
             name: 'Question-2',
-            id: 'employee-experience-t24-question-2',
+            id: 'connectivity-t20-question-2',
           },
           {
             name: 'Question-3',
-            id: 'employee-experience-t24-question-3',
+            id: 'connectivity-t20-question-3',
           },
         ],
 
@@ -386,77 +308,155 @@ const topicsData = [
     ],
   },
   {
-    name: 'Benefits',
-    id: 'benefits',
+    name: 'Belonging',
+    id: 'belonging',
     subTopics: [
       {
-        name: 'Topic 25',
+        name: 'Team Connection',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'benefits-t25-question-1',
+            id: 'belonging-t21-question-1',
           },
           {
             name: 'Question-2',
-            id: 'benefits-t25-question-2',
+            id: 'belonging-t21-question-2',
           },
           {
             name: 'Question-3',
-            id: 'benefits-t25-question-3',
+            id: 'belonging-t21-question-3',
           },
         ],
 
       },
       {
-        name: 'Topic 26',
+        name: 'Inclusion',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'benefits-t26-question-1',
+            id: 'belonging-t22-question-1',
           },
           {
             name: 'Question-2',
-            id: 'benefits-t26-question-2',
+            id: 'belonging-t22-question-2',
           },
           {
             name: 'Question-3',
-            id: 'benefits-t26-question-3',
+            id: 'belonging-t22-question-3',
           },
         ],
 
       },
       {
-        name: 'Topic 27',
+        name: 'Collaboration',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'benefits-t27-question-1',
+            id: 'belonging-t23-question-1',
           },
           {
             name: 'Question-2',
-            id: 'benefits-t27-question-2',
+            id: 'belonging-t23-question-2',
           },
           {
             name: 'Question-3',
-            id: 'benefits-t27-question-3',
+            id: 'belonging-t23-question-3',
           },
         ],
 
       },
       {
-        name: 'Topic 28',
+        name: 'DEI',
         inquiries: [
           {
             name: 'Question-1',
-            id: 'benefits-t28-question-1',
+            id: 'belonging-t24-question-1',
           },
           {
             name: 'Question-2',
-            id: 'benefits-t28-question-2',
+            id: 'belonging-t24-question-2',
           },
           {
             name: 'Question-3',
-            id: 'benefits-t28-question-3',
+            id: 'belonging-t24-question-3',
+          },
+        ],
+
+      },
+    ],
+  },
+  {
+    name: 'Microaggressions',
+    id: 'microaggressions',
+    subTopics: [
+      {
+        name: 'Language',
+        inquiries: [
+          {
+            name: 'Question-1',
+            id: 'microaggressions-t25-question-1',
+          },
+          {
+            name: 'Question-2',
+            id: 'microaggressions-t25-question-2',
+          },
+          {
+            name: 'Question-3',
+            id: 'microaggressions-t25-question-3',
+          },
+        ],
+
+      },
+      {
+        name: 'Impact Awareness',
+        inquiries: [
+          {
+            name: 'Question-1',
+            id: 'microaggressions-t26-question-1',
+          },
+          {
+            name: 'Question-2',
+            id: 'microaggressions-t26-question-2',
+          },
+          {
+            name: 'Question-3',
+            id: 'microaggressions-t26-question-3',
+          },
+        ],
+
+      },
+      {
+        name: 'Team Collaboration and Inclusion',
+        inquiries: [
+          {
+            name: 'Question-1',
+            id: 'microaggressions-t27-question-1',
+          },
+          {
+            name: 'Question-2',
+            id: 'microaggressions-t27-question-2',
+          },
+          {
+            name: 'Question-3',
+            id: 'microaggressions-t27-question-3',
+          },
+        ],
+
+      },
+      {
+        name: 'Exlusion',
+        inquiries: [
+          {
+            name: 'Question-1',
+            id: 'microaggressions-question-1',
+          },
+          {
+            name: 'Question-2',
+            id: 'microaggressions-question-2',
+          },
+          {
+            name: 'Question-3',
+            id: 'microaggressions-question-3',
           },
         ],
       },
