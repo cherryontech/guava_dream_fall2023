@@ -29,7 +29,7 @@ const AssessmentTopics = ({ subject, subTopics, addSelectedTopics }) => {
     </div>
   ));
   return (
-    <article className="p-3.5 text-center flex flex-col justify-evenly items-center bg-white rounded-xl w-72 h-80">
+    <article className="p-1 text-center flex flex-col justify-evenly items-center bg-white rounded-xl w-72 h-80">
       <h3 className="my-1 font-semibold text-xl">{subject}</h3>
       {renderSubTopics}
     </article>

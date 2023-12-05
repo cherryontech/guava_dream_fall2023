@@ -35,7 +35,7 @@ const CreateAssessment = ({ displayQuestions }) => {
     
     <section className='flex  '>
       <SideMenu />
-      <div className='flex flex-col bg-indigo-100 p-3 h-screen w-full'>
+      <div className='flex flex-col bg-indigo-100 p-3 h-fit w-full'>
         <div className="bg-white h-28 w-2/6 rounded-xl py-3.5 px-3 m-4">
           <div className='flex'>
             <img src={ CreateAssessmentIcon } alt="Icon of piece of paper with upward facing arrow" className='w-8 h-8 mr-2'/>
@@ -43,20 +43,21 @@ const CreateAssessment = ({ displayQuestions }) => {
           </div>
           <p className='text-sm mt-2'>Select what you want to discover about you team</p>
         </div>
-      <div className='w-4/5'>
+      <div className='md:w-4/5 lg:2/30'>
         <form
-          className="grid grid-cols-3 gap-12 m-4"
+          className="grid grid-cols-3 gap-12 m-4 relative"
           onSubmit={(e) => formSubmitHandler(e)}
         >
           {topicsMap}
-          <button
+          
+        </form>
+        </div>
+        <button
             type="submit"
-            className="bg-white text-slate-500 rounded-full border-slate-500 border shadow-lg absolute top-40 right-24 h-14 w-24"
+            className="bg-white text-slate-500 rounded-full border-slate-500 border shadow-lg m-4 h-14 w-28"
             >
             Submit
           </button>
-        </form>
-        </div>
       </div>
     </section>
   );
