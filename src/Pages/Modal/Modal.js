@@ -1,7 +1,7 @@
 //import './Modal.css';
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Modal = ({isOpen, setIsOpen}) => {
   useEffect(() => {
@@ -9,6 +9,10 @@ const Modal = ({isOpen, setIsOpen}) => {
       console.log("Modal open")
     }
   }, [isOpen]);
+  const navigate = useNavigate();
+  const handleNavigation = () => {
+    navigate("/assessment-draft")
+  }
   
   return (
     <>
@@ -25,14 +29,14 @@ const Modal = ({isOpen, setIsOpen}) => {
               >
                 Add more questions
               </button>
-              <Link to={"assessment-draft"}>
+              
                 <button
                   className="text-base text-indigo-400"
-                  onClick={() => setIsOpen(false)}
+                  onClick={ handleNavigation }
                 >
                   Continue to assessment page
                 </button>
-              </Link>
+              
             </div>
           </div>
         </div>

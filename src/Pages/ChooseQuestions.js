@@ -3,15 +3,19 @@ import Questions from './Questions';
 import SideMenu from "../SideMenu.js";
 import  CreateAssessmentIcon  from "../Assets/Create Assessment Icon.png"; 
 import Modal from './/Modal/Modal.js';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
-const ChooseQuestions = ({ selectedFields, addQuestionsToAssessment }) => {
+const ChooseQuestions = ({ selectedFields, addQuestionsToAssessment })  => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    console.log("isOpen after click:", isOpen);
+  }, [isOpen]);
+  
   const handleButtonClick = () => {
-      console.log("Button Clicked")
-      setIsOpen(true)
-      
+      console.log("Button");
+      setIsOpen(true);
   }
 
   const renderQuestions = selectedFields.map((selectedField, index) => (
@@ -21,9 +25,7 @@ const ChooseQuestions = ({ selectedFields, addQuestionsToAssessment }) => {
       targetedTopic={selectedField.name}
       addQuestionsToAssessment={addQuestionsToAssessment}
       />
-  
-  
-      
+   
   ));
 
   return (
@@ -40,16 +42,15 @@ const ChooseQuestions = ({ selectedFields, addQuestionsToAssessment }) => {
         <div className="grid w-fit grid-cols-3 gap-12 m-4 ">
           {renderQuestions}
         </div>
-        {isOpen && <Modal isOpen={isOpen} setIsOpen={setIsOpen} />}
+        <div>
          <button
-            type="button"
             className="bg-white text-slate-500 rounded-full border-slate-500 border shadow-lg m-4 h-14 w-36"
-            onClick={() => handleButtonClick()}
+            onClick={handleButtonClick}
             >
             Add Questions
           </button>
-          
-          
+          {isOpen && <Modal isOpen={isOpen} setIsOpen={setIsOpen} />}
+        </div>
       </div>
     </section>
   );
