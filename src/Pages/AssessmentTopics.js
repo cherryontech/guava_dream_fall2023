@@ -12,29 +12,41 @@ const AssessmentTopics = ({ subject, subTopics, addSelectedTopics }) => {
     };
     addSelectedTopics(selectedTopic);
     console.log("Added!")
+  
 
-    setClickedSubTopics((prevClickedSubTopics) => [
-      ...prevClickedSubTopics,
-      subTopic.name,
-    ]);
+     setClickedSubTopics((prevClickedSubTopics) => {
+      const isAlreadyClicked = prevClickedSubTopics.includes(subTopic.name);
+
+      if (isAlreadyClicked) {
+        return prevClickedSubTopics.filter((name) => name !== subTopic.name);
+      } else {
+        return [...prevClickedSubTopics, subTopic.name];
+      }
+    });
   };
+
+
 
   const renderSubTopics = subTopics.map((subTopic, index) => (
     <div
       key={index}
-       className={`flex justify-center place-items place-items-center bg-white text-blue text-slate-500 text-sm h-11 w-56 border-solid border-slate-500 border rounded-full hover:bg-slate-200 hover:cursor-pointer hover:text-white w-2/3 ${
-        clickedSubTopics.includes(subTopic.name) ? 'bg-slate-200' : ''
-      }`}
+      className={`flex justify-center place-items place-items-center bg-white text-blue text-slate-500 text-sm h-11 w-56 border-solid border-slate-500 border rounded-full hover:bg-slate-200 hover:cursor-pointer hover:text-white w-2/3 ${
+            clickedSubTopics.includes(subTopic.name) ? 'bg-slate-200' : ''
+          }`}
     >
         <button
         type="button"
         id={subTopic.name}
         onClick={() => handleClick(subTopic)}
+        className={`${
+          clickedSubTopics.includes(subTopic.name) ? 'bg-slate-200' : ''
+        }`}
       >
         {subTopic.name}
       </button>
     </div>
   ));
+
   return (
     <article className="text-center flex flex-col justify-evenly items-center bg-white rounded-xl w-72 h-80">
       <h3 className="my-1 font-semibold text-xl">{subject}</h3>
@@ -49,4 +61,4 @@ AssessmentTopics.propTypes = {
   addSelectedTopics: PropTypes.func.isRequired,
 };
 
-export default AssessmentTopics;
+export default  AssessmentTopics 
