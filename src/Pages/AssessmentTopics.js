@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 
+
 const AssessmentTopics = ({ subject, subTopics, addSelectedTopics }) => {
-  const handleChange = (subTopic) => {
+  const handleClick = (subTopic) => {
     const selectedTopic = {
       name: subTopic.name,
       subject: { subject },
       questions: subTopic.inquiries,
     };
     addSelectedTopics(selectedTopic);
+    console.log("Added!")
   };
 
   const renderSubTopics = subTopics.map((subTopic, index) => (
@@ -15,17 +17,13 @@ const AssessmentTopics = ({ subject, subTopics, addSelectedTopics }) => {
       key={index}
       className="flex justify-center place-items place-items-center bg-white text-blue text-slate-500 text-sm  h-11 w-56 border-solid border-slate-500 border rounded-full hover:bg-slate-200 hover:cursor-pointer hover:text-white w-2/3"
     >
-      <label htmlFor="checkbox">
-        {subTopic.name}
-      </label>
-      <input
-        type="checkbox"
+        <button
+        type="button"
         id={subTopic.name}
-        value={subTopic.name}
-        defaultChecked={false}
-        onChange={() => handleChange(subTopic)}
-        //className="opacity-0"
-      />
+        onClick={() => handleClick(subTopic)}
+      >
+        {subTopic.name}
+      </button>
     </div>
   ));
   return (
