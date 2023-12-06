@@ -39,7 +39,7 @@ const ChooseQuestions = ({ selectedFields, addQuestionsToAssessment })  => {
           </div>
           <p className='text-sm mt-2'>Choose which questions you would like to have in your assessment</p>
         </div>
-        <div className="grid w-fit grid-cols-3 gap-12 m-4 ">
+        <div className="grid w-fit md:grid-cols-3 lg:grid-cols-5 gap-12 m-4 ">
           {renderQuestions}
         </div>
         <div>
