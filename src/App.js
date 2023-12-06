@@ -34,7 +34,7 @@ function App() {
     if (!assessmentQuestions.includes(newQuestion)) {
       setAssessmentQuestions(addedQuestions);
     }
-    setIsOpen(true)
+    //setIsOpen(true)
   };
 
 

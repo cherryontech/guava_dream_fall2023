@@ -45,7 +45,7 @@ const CreateAssessment = ({ displayQuestions }) => {
         </div>
       <div className='md:w-4/5 lg:2/30'>
         <form
-          className="grid grid-cols-3 gap-12 m-4 relative"
+          className="grid grid-cols-3 m-4 relative gap-12 "
           onSubmit={(e) => formSubmitHandler(e)}
         >
           {topicsMap}
