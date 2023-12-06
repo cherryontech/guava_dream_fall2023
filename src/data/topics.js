@@ -213,15 +213,15 @@ const topicsData = [
         name: 'Impact on Performance',
         inquiries: [
           {
-            name: 'Question-1',
+            name: 'Do you feel safe enough in the workplace to do your best work?',
             id: 'psychological-safety-t16-question-1',
           },
           {
-            name: 'Question-2',
+            name: 'How often do you feel distracted from your work because you don not feel safe in the wokrplace?',
             id: 'psychological-safety-t16-question-2',
           },
           {
-            name: 'Question-3',
+            name: 'How much of an impact does your feeling of safety have on your ability to be promoted?',
             id: 'psychological-safety-t16-question-3',
           },
         ],
