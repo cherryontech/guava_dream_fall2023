@@ -13,7 +13,7 @@ const ViewAssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
   const displayAssessmentQuestions = assessmentQuestions.map((question, index) => (
     <div className="flex flex-col mb-12"key={index + 1}>
       <h3 className='font-bold text-lg ml-10'>{question.name}</h3>
-      <h4 className='text-base ml-10'>{index + 1}/{assessmentQuestions.length + 1}</h4>
+      <h4 className='text-base ml-10'>{index + 1}/{assessmentQuestions.length}</h4>
       
       
       <button className="mt-2 ml-8 rounded-full bg-white w-24 h-10 text-xs" type="button" onClick={() => deleteQuestion(question.id)}>Delete Question</button>
@@ -103,4 +103,3 @@ ViewAssessmentDraft.propTypes = {
 };
 
 export default ViewAssessmentDraft;
-
