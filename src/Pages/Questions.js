@@ -1,13 +1,27 @@
 import PropTypes from 'prop-types';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Questions = ({ questions, targetedTopic, addQuestionsToAssessment }) => {
   const [clickedIndexes, setClickedIndexes] = useState([]);
 
   const handleButtonClick = (question, index) =>{
+    
+    
+    setClickedIndexes((prevIndexes) => {
+      const isIndexClicked = prevIndexes.includes(index);
+
+      if (isIndexClicked) {
+        return prevIndexes.filter((clickedIndex) => clickedIndex !== index);
+      } else {
+        return [...prevIndexes, index];
+      }
+
+    });
     addQuestionsToAssessment(question);
-    setClickedIndexes((prevIndexes) => [...prevIndexes, index]);
-  }
+   
+  };
+
+  useEffect(()=> {}, [clickedIndexes]);
 
   const displayQuestions = questions.map((question, index) => (
     <article className="p-3 text-left flex flex-col gap-6 bg-white rounded-xl w-64 h-72" key={`${question.name}-${index}`}>
