@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Questions = ({ questions, targetedTopic, addQuestionsToAssessment }) => {
   const [clickedIndexes, setClickedIndexes] = useState([]);
@@ -21,7 +21,7 @@ const Questions = ({ questions, targetedTopic, addQuestionsToAssessment }) => {
    
   };
 
-  useEffect(()=> {}, [clickedIndexes]);
+
 
   const displayQuestions = questions.map((question, index) => (
     <article className="p-3 text-left flex flex-col gap-6 bg-white rounded-xl w-64 h-72" key={`${question.name}-${index}`}>
