@@ -41,7 +41,7 @@ const Questions = ({ questions, targetedTopic, addQuestionsToAssessment }) => {
           +
         </button>
       </div>
-      <div className='flex pt-24'>
+      <div className='flex absolute pt-48'>
         <p className='border rounded-full w-36 border-black font-bold text-sm p-2 text-center'>{targetedTopic}</p>
       </div>
     </article>
