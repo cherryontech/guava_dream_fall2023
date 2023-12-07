@@ -38,9 +38,13 @@ const AssessmentTopics = ({ subject, subTopics, addSelectedTopics }) => {
         type="button"
         id={subTopic.name}
         onClick={() => handleClick(subTopic)}
-        className={`${
-          clickedSubTopics.includes(subTopic.name) ? 'bg-slate-200' : ''
-        }`}
+        className= "h-11 w-56 rounded-full"
+        style={{
+        backgroundColor: clickedSubTopics.includes(subTopic.name)
+          ? '#7894FF' 
+          : 'transparent',
+        color: clickedSubTopics.includes(subTopic.name) ? '#ffffff' : '#1F2937', 
+      }}
       >
         {subTopic.name}
       </button>
