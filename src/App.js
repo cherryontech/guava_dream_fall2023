@@ -15,8 +15,9 @@ import Home from './Pages/Home.js';
 import Assessments from "./Pages/Assessments.js";
 import Resources from "./Pages/Resources.js";
 import Navbar from './Navbar.js';
-import { Preview } from './Pages/Employee/Preview';
-
+import Details from './Details';
+import Questions from './Questions';
+import Appreciate from './Appreciate';
 
 
 function App() {
@@ -50,8 +51,10 @@ function App() {
       <Navbar />
       <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/preview" element={<Preview />} />
+            <Route path="/details" element={<Details />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/questions" element={<Questions />} />
+            <Route path="/appreciate" element={<Appreciate />} />
             <Route path="/about" element={<About />} />
             <Route path="/community" element={<Community />} />
             <Route path="/assessments" element={<Assessments />} />
