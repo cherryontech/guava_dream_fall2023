@@ -22,7 +22,8 @@ const Questions = () => {
                 </p>
             </div>
             <button className="bg-blue-600 w-60 h-12 rounded-full text-white flex items-center float-right justify-center"
-                 onClick={handleClick}>Continue to Next Question</button>
+                 onClick={handleClick}>Continue to Next Question
+            </button>
         </div>
     
     )
