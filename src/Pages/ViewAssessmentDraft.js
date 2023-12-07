@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Image from "../Assets/Title Image.png";
-import SideMenu from "../SideMenu"
+import SideMenu from "../SideMenu";
+import {  useNavigate } from 'react-router-dom';
 
 
 const ViewAssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
@@ -27,6 +28,7 @@ const ViewAssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
   //... 
     const [recipientName, setRecipientName] = useState('');
     const [recipientEmail, setRecipientEmail] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
     e.preventDefault();
@@ -44,6 +46,7 @@ const ViewAssessmentDraft = ({ assessmentQuestions, deleteQuestion }) => {
     } finally {
       setLoading(false);
     }
+    navigate("/");
   };
 
 

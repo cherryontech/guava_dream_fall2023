@@ -23,7 +23,7 @@ const SideMenu = () => {
     const handleLogout = () => {               
         signOut(auth).then(() => {
         // Sign-out successful.
-            navigate("/Home");
+            navigate("/");
             console.log("Signed out successfully")
         }).catch((error) => {
             console.error("Error occured during sign-out:", error);
@@ -75,7 +75,7 @@ const SideMenu = () => {
                             Resources
                         </NavLink>
                         <button className="text-indigo-400 rounded-full border-2 border-indigo-400 bg-white w-24 h-10 text-xs mt-36 absolute bottom-2" onClick={handleLogout}> 
-                        <NavLink to="/community"> 
+                        <NavLink to="/"> 
                             Logout
                         </NavLink>   
                         </button>
