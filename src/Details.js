@@ -4,7 +4,7 @@ const Details = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate('/questions');
+        navigate('/question');
     };
     return (
         <div className="bg-indigo-200 fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">

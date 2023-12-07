@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-const Questions = () => {
+const Question = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -30,4 +30,4 @@ const Questions = () => {
 
 }
 
-export default Questions
+export default Question

@@ -16,7 +16,7 @@ import Assessments from "./Pages/Assessments.js";
 import Resources from "./Pages/Resources.js";
 import Navbar from './Navbar.js';
 import Details from './Details';
-import Questions from './Questions';
+import Question from './Question';
 import Appreciate from './Appreciate';
 
 
@@ -53,7 +53,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/details" element={<Details />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/questions" element={<Questions />} />
+            <Route path="/question" element={<Question />} />
             <Route path="/appreciate" element={<Appreciate />} />
             <Route path="/about" element={<About />} />
             <Route path="/community" element={<Community />} />
