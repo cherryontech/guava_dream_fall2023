@@ -35,7 +35,7 @@ const Login = () => {
                 <section className="flex justify-center mt-0 ml-36" >
                     <div className="flex flex-col gap-y-6 w-4/5" >
                         <h1 className="text-5xl font-bold text-indigo-400 w-3/5">{`Let's start listening to your employees`}</h1>
-                        <p className="text-base text-align-left text-slate-500 w-96">Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.</p>
+                        <p className="text-base text-align-left text-slate-500 w-96">Your employees are your most valuable asset. Take the time to listen and take action that has lasting impact on your workplace.</p>
                     <div className="mt-12 ml-60 w-4/5">
                         <img src={ Image } alt="Three cartoon people sitting in front of a computer with lightbulbs above their heads"></img>
                     </div>
