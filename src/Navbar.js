@@ -27,11 +27,11 @@ const Navbar = () => {
     </>
     return (
         <nav>
-            <div className="h-10vh flex justify-between z-50 tc lg:py-5 py-4 m-3">
+            <div className="h-24 flex justify-between z-50 tc lg:py-5 py-4">
                 <NavLink to="/">
-                    <div className="flex items-center flex-1 mb-2">
-                    <img src={ Logo } className="w-5 m-4" alt="EquiVate logo, pen inside of box" />
-                        <span className="text-xl font-bold">EquiVate</span>
+                    <div className="flex items-center flex-1 mb-2 pt-2">
+                    <img src={ Logo } className="w-10 h-10 m-4" alt="EquiVate logo, pen inside of box" />
+                        <span className="text-3xl font-bold">EquiVate</span>
                     </div>
                 </NavLink>
                 <div className="lg:flex md:flex lg: flex-1 items-center justify-end font-normal hidden">
