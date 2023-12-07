@@ -74,7 +74,7 @@ const SideMenu = () => {
                             <img src={ ResourcesIcon } alt="Icon of lightbulb" className='w-8 h-8 mr-2' />
                             Resources
                         </NavLink>
-                        <button className="text-indigo-400 rounded-full border-2 border-indigo-400 bg-white w-24 h-10 text-xs mt-36 ml-16 absolute bottom-2" onClick={handleLogout}> 
+                        <button className="text-indigo-400 rounded-full border-2 border-indigo-400 bg-white w-24 h-10 text-xs mt-36 absolute bottom-2" onClick={handleLogout}> 
                         <NavLink to="/community"> 
                             Logout
                         </NavLink>   
