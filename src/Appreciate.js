@@ -7,13 +7,13 @@ const About = () => {
         navigate('/details');
     };
     return (
-        <div className="flex flex-row	bg-indigo-200 fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
-            <div className="bg-white w-9/12 h-fit relative top-60 mx-auto p-20 border shadow-lg rounded-md bg-white">
+        <div className="flex flex-row bg-indigo-200 fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-screen w-full">
+            <div className="bg-white w-8/12 h-fit flex relative top-60 mx-auto p-20 border shadow-lg rounded-md bg-white">
                 <h3 className="text-indigo-700 font-bold text-2xl w-6/12">Thank you for completing the assessment! It is
                  important to the company that we gather information on company demographics so we can better ease
                   imposter syndrome in the workplace. Do you consent to providing demographic information?
                 </h3>
-                <div className='flex flex-col float-right gap-6'>
+                <div className='flex flex-col justify-center ml-9 gap-6'>
                   <button 
                   className="bg-white w-60 h-12 rounded-full text-blue-600 border-2 items-center justify-center hover:bg-blue-600 hover:text-white"
                   onClick={handleClick}
