@@ -7,7 +7,7 @@ const Details = () => {
         navigate('/question');
     };
     return (
-        <div className="bg-indigo-200 fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+        <div className="bg-indigo-200 inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-screen w-full">
             <div className="bg-white w-9/12 h-fit relative top-60 mx-auto p-20 border shadow-lg rounded-md bg-white">
                 <h2 className="text-indigo-700 font-bold text-2xl m-12">Why is this assessment important?</h2>
                 <p className="text-blue-600	font-normal	mx-24 my-12 text-lg">Lorem ipsum dolor sit amet consectetur 
