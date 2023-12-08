@@ -7,7 +7,7 @@ const About = () => {
         navigate('/result');
     };
     return (
-        <div className="flex flex-row bg-indigo-200 fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-screen w-full">
+        <div className="bg-indigo-200 inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-screen w-full">
             <div className="bg-white w-8/12 h-fit flex relative top-60 mx-auto p-20 border shadow-lg rounded-md bg-white">
                 <h3 className="text-indigo-700 font-bold text-2xl">Thank you for completing the assessment! It is
                  important to the company that we gather information on company demographics so we can better ease
