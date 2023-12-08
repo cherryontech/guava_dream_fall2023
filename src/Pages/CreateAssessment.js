@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import AssessmentTopics from './AssessmentTopics';
 import topicsData from '../data/topics';
 import SideMenu from '../SideMenu';
+import  CreateAssessmentIcon  from "../Assets/Create Assessment Icon.png"; 
 
 const CreateAssessment = ({ displayQuestions }) => {
   const [selectedTopics, setSelectedTopics] = useState([]);
@@ -31,24 +32,33 @@ const CreateAssessment = ({ displayQuestions }) => {
   };
 
   return (
-    <section>
+    
+    <section className='flex  '>
       <SideMenu />
-      <div className="bg-white w-2/3 rounded-xl py-3.5 px-3 m-4">
-        <h3 className="text-blue">Create Assessment</h3>
-        <p>Select what you want to discover about you team</p>
-      </div>
-      <form
-        className="grid grid-cols-3 gap-4 h-full m-4"
-        onSubmit={(e) => formSubmitHandler(e)}
-      >
-        {topicsMap}
+      <div className='flex flex-col bg-indigo-100 p-3 h-fit w-full'>
+        <div className="bg-white h-28 w-2/6 rounded-xl py-3.5 px-3 m-4">
+          <div className='flex'>
+            <img src={ CreateAssessmentIcon } alt="Icon of piece of paper with upward facing arrow" className='w-8 h-8 mr-2'/>
+            <h3 className="text-slate-500 text-2xl font-semibold ">Create Assessment</h3>
+          </div>
+          <p className='text-sm mt-2'>Select what you want to discover about you team</p>
+        </div>
+      <div className='md:w-4/5 lg:2/30'>
+        <form
+          className="grid grid-cols-3 m-4 relative gap-12 "
+          onSubmit={(e) => formSubmitHandler(e)}
+        >
+          {topicsMap}
         <button
-          type="submit"
-          className="bg-white text-blue rounded-md shadow-lg absolute top-0 right-0 h-16 w-16"
-          >
-          Submit
-        </button>
-      </form>
+            type="submit"
+            className="bg-white text-slate-500 rounded-full border-slate-500 border shadow-lg m-4 h-14 w-28"
+            >
+            Submit
+          </button>
+        </form>
+        </div>
+        
+      </div>
     </section>
   );
 };

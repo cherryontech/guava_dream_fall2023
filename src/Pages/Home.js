@@ -13,7 +13,7 @@ const Home = () => {
                 <div className="flex flex-col w-1/3 mt-32">
                     <h1 className="text-indigo-400 text-6xl font-semibold pb-4">Your workplace equity navigator</h1>
 
-                    <p className="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.</p>
+                    <p className="text-sm text-slate-500">Take the time to listen to your team and build a more equitable workplace so all employees feel welcome, empowered, and able to do their best work.</p>
                     <div className="flex ml-0">
                         <button className="text-white rounded-full border-2 border-indigo-400 bg-indigo-400 w-36 h-16 text-base mt-6 "> 
                             <NavLink to="/Signup"> 

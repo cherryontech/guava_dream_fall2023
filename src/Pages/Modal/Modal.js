@@ -1,31 +1,52 @@
-import './Modal.css';
+//import './Modal.css';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Modal = ({ setIsOpen }) => {
+const Modal = ({isOpen, setIsOpen}) => {
+  useEffect(() => {
+    if (isOpen) {
+      console.log("Modal open")
+    }
+  }, [isOpen]);
+  const navigate = useNavigate();
+  const handleNavigation = () => {
+    navigate("/assessment-draft")
+  }
+  
   return (
-  <section>
-    <div className=".darkBG" onClick={() => setIsOpen(false)} />
-      <div className=".centered">
-        <div className=".modal">
-          <div className=".modalHeader">
-            <h5 className=".heading">
-              Would you like to continue to accessment page or add more questions?
+    <>
+      {isOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-8 rounded-md max-w-2xl">
+            <h5 className="text-lg text-left font-bold pb-2">
+              Would you like to continue to the assessment page or add more questions?
             </h5>
+            <div className="flex justify-start gap-10">
+              <button
+                className="text-base text-indigo-400"
+                onClick={() => setIsOpen(false)}
+              >
+                Add more questions
+              </button>
+              
+                <button
+                  className="text-base text-indigo-400"
+                  onClick={ handleNavigation }
+                >
+                  Continue to assessment page
+                </button>
+              
+            </div>
           </div>
-          <button className=".closeBtn" onClick={() => setIsOpen(false)}>
-            Add more questions
-          </button>
-          <Link to={"assessment-draft"}>
-            <button onClick={() => setIsOpen(false)}>Continue to assessment page</button>
-          </Link>
         </div>
-      </div>
-  </section>
-)
+      )}
+    </>
+  );
 };
 
 Modal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
   setIsOpen: PropTypes.func.isRequired,
 };
 
