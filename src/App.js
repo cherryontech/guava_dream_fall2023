@@ -15,8 +15,10 @@ import Home from './Pages/Home.js';
 import Assessments from "./Pages/Assessments.js";
 import Resources from "./Pages/Resources.js";
 import Navbar from './Navbar.js';
-
-
+import Details from './Details';
+import Question from './Question';
+import Appreciate from './Appreciate';
+import Result from './Result';
 
 function App() {
 
@@ -43,12 +45,17 @@ function App() {
     setAssessmentQuestions(filteredQuestions);
   };
   return (
+
     <div>
       <BrowserRouter>
       <Navbar />
       <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/result" element={<Result />} />
+            <Route path="/details" element={<Details />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/question" element={<Question />} />
+            <Route path="/appreciate" element={<Appreciate />} />
             <Route path="/about" element={<About />} />
             <Route path="/community" element={<Community />} />
             <Route path="/assessments" element={<Assessments />} />
