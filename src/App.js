@@ -18,7 +18,7 @@ import Navbar from './Navbar.js';
 import Details from './Details';
 import Question from './Question';
 import Appreciate from './Appreciate';
-
+import Result from './Result';
 
 function App() {
 
@@ -51,6 +51,7 @@ function App() {
       <Navbar />
       <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/result" element={<Result />} />
             <Route path="/details" element={<Details />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/question" element={<Question />} />
