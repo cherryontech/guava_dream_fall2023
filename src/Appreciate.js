@@ -15,11 +15,11 @@ const About = () => {
                 </h3>
                 <div className='flex flex-col float-right gap-6'>
                   <button 
-                  className="bg-white w-60 h-12 rounded-full text-blue-600 border-2 items-center justify-center"
+                  className="bg-white w-60 h-12 rounded-full text-blue-600 border-2 items-center justify-center hover:bg-blue-600 hover:text-white"
                   onClick={handleClick}
                   >Yes, I consent</button>
                   <button 
-                  className="bg-blue-600 w-60 h-12 rounded-full text-white items-center justify-center"
+                  className="bg-white w-60 h-12 rounded-full text-blue-600 border-2 items-center justify-center hover:bg-blue-600 hover:text-white"
                   onClick={handleClick}
                   >No, I do not consent</button>
                 </div>
